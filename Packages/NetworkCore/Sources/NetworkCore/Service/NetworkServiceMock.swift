@@ -14,7 +14,8 @@ class NetworkServiceMock<EndPoint: EndPointType>: NetworkServiceble {
             let url = bundle.url(forResource: "movie_detail_response", withExtension: "json", subdirectory: "MockResponses")
             if let url {
                 let data = try Data(contentsOf: url)
-                completion(data, HTTPURLResponse(url: route.baseURL, statusCode: 200, httpVersion: nil, headerFields: nil), nil)
+                let dummyResponse = HTTPURLResponse(url: route.baseURL, statusCode: 200, httpVersion: "http2", headerFields: [:])
+                completion(data, dummyResponse, nil)
             } else {
                 completion(nil, nil, nil)
             }

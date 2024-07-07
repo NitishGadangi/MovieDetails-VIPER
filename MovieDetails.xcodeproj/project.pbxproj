@@ -12,6 +12,7 @@
 		5EDDEE522C3B187900DAE3BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE512C3B187900DAE3BB /* ViewController.swift */; };
 		5EDDEE572C3B187B00DAE3BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EDDEE562C3B187B00DAE3BB /* Assets.xcassets */; };
 		5EDDEE5A2C3B187B00DAE3BB /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 5EDDEE592C3B187B00DAE3BB /* Base */; };
+		5EDDEE652C3B3C1800DAE3BB /* NetworkCore in Frameworks */ = {isa = PBXBuildFile; productRef = 5EDDEE642C3B3C1800DAE3BB /* NetworkCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EDDEE652C3B3C1800DAE3BB /* NetworkCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +44,7 @@
 				5EDDEE4C2C3B187900DAE3BB /* MovieDetails */,
 				5EDDEE612C3B222100DAE3BB /* Packages */,
 				5EDDEE4B2C3B187900DAE3BB /* Products */,
+				5EDDEE632C3B3C1800DAE3BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +77,13 @@
 			path = Packages;
 			sourceTree = "<group>";
 		};
+		5EDDEE632C3B3C1800DAE3BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -90,6 +100,9 @@
 			dependencies = (
 			);
 			name = MovieDetails;
+			packageProductDependencies = (
+				5EDDEE642C3B3C1800DAE3BB /* NetworkCore */,
+			);
 			productName = MovieDetails;
 			productReference = 5EDDEE4A2C3B187900DAE3BB /* MovieDetails.app */;
 			productType = "com.apple.product-type.application";
@@ -361,6 +374,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5EDDEE642C3B3C1800DAE3BB /* NetworkCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5EDDEE422C3B187900DAE3BB /* Project object */;
 }

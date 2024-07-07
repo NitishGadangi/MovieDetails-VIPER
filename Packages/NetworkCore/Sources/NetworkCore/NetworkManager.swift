@@ -30,7 +30,8 @@ public enum NetworkManagerEnv {
 public class NetworkManager<EndPoint: EndPointType> {
     private let networkServiceProd = NetworkService<EndPoint>()
     private let networkServiceStage = NetworkServiceMock<EndPoint>()
-    var env: NetworkManagerEnv = .prod
+    private let env: NetworkManagerEnv
+    
     private var networkService: any NetworkServiceble<EndPoint> {
         get {
             switch env {
@@ -42,9 +43,13 @@ public class NetworkManager<EndPoint: EndPointType> {
         }
     }
 
-    func sendRequest<T: Decodable>(endPoint: EndPoint, completion: @escaping (Result<T, NetworkError>) -> Void) {
+    public init(env: NetworkManagerEnv) {
+        self.env = env
+    }
+
+    public func sendRequest<T: Decodable>(endPoint: EndPoint, responseType: T.Type, completion: @escaping (Result<T, NetworkError>) -> Void) {
         networkService.request(endPoint) { data, response, error in
-            if let error {
+            if error != nil {
                 let networkError = NetworkError(message: NetworkResponse.failed.rawValue)
                 completion(.failure(networkError))
             }
