@@ -22,6 +22,7 @@
 		5EDDEE562C3B187B00DAE3BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EDDEE592C3B187B00DAE3BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EDDEE5B2C3B187B00DAE3BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EDDEE622C3B226E00DAE3BB /* NetworkCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkCore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +40,7 @@
 			isa = PBXGroup;
 			children = (
 				5EDDEE4C2C3B187900DAE3BB /* MovieDetails */,
+				5EDDEE612C3B222100DAE3BB /* Packages */,
 				5EDDEE4B2C3B187900DAE3BB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,6 +64,14 @@
 				5EDDEE5B2C3B187B00DAE3BB /* Info.plist */,
 			);
 			path = MovieDetails;
+			sourceTree = "<group>";
+		};
+		5EDDEE612C3B222100DAE3BB /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				5EDDEE622C3B226E00DAE3BB /* NetworkCore */,
+			);
+			path = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
