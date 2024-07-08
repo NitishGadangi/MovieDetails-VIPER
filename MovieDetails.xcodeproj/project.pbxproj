@@ -13,6 +13,21 @@
 		5EDDEE572C3B187B00DAE3BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EDDEE562C3B187B00DAE3BB /* Assets.xcassets */; };
 		5EDDEE5A2C3B187B00DAE3BB /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 5EDDEE592C3B187B00DAE3BB /* Base */; };
 		5EDDEE652C3B3C1800DAE3BB /* NetworkCore in Frameworks */ = {isa = PBXBuildFile; productRef = 5EDDEE642C3B3C1800DAE3BB /* NetworkCore */; };
+		5EDDEE682C3BB2EE00DAE3BB /* DetailsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE672C3BB2EE00DAE3BB /* DetailsBuilder.swift */; };
+		5EDDEE702C3BC64900DAE3BB /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 5EDDEE6F2C3BC64900DAE3BB /* RxCocoa */; };
+		5EDDEE732C3BC69400DAE3BB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE722C3BC69400DAE3BB /* DetailsViewController.swift */; };
+		5EDDEE752C3BC69F00DAE3BB /* DetailsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE742C3BC69F00DAE3BB /* DetailsViewControllerProtocol.swift */; };
+		5EDDEE772C3BC6B600DAE3BB /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE762C3BC6B600DAE3BB /* DetailsPresenter.swift */; };
+		5EDDEE792C3BC6BD00DAE3BB /* DetailsPresenterIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE782C3BC6BD00DAE3BB /* DetailsPresenterIO.swift */; };
+		5EDDEE7B2C3BC6CC00DAE3BB /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE7A2C3BC6CC00DAE3BB /* DetailsInteractor.swift */; };
+		5EDDEE7D2C3BC6D300DAE3BB /* DetailsInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE7C2C3BC6D300DAE3BB /* DetailsInteractorIO.swift */; };
+		5EDDEE7F2C3BC6F100DAE3BB /* DetailsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE7E2C3BC6F100DAE3BB /* DetailsRepository.swift */; };
+		5EDDEE822C3BC71300DAE3BB /* DetailsRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE812C3BC71300DAE3BB /* DetailsRepositoryProtocol.swift */; };
+		5EDDEE852C3BC72E00DAE3BB /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE842C3BC72E00DAE3BB /* DetailsRouter.swift */; };
+		5EDDEE872C3BC74000DAE3BB /* DetailsRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE862C3BC74000DAE3BB /* DetailsRouterProtocol.swift */; };
+		5EDDEE892C3BC78A00DAE3BB /* DetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE882C3BC78A00DAE3BB /* DetailsModels.swift */; };
+		5EDDEE8B2C3BD11E00DAE3BB /* CommonModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE8A2C3BD11E00DAE3BB /* CommonModels.swift */; };
+		5EDDEE8D2C3BD8AB00DAE3BB /* MoviesAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE8C2C3BD8AB00DAE3BB /* MoviesAPIEndPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +39,20 @@
 		5EDDEE592C3B187B00DAE3BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EDDEE5B2C3B187B00DAE3BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EDDEE622C3B226E00DAE3BB /* NetworkCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkCore; sourceTree = "<group>"; };
+		5EDDEE672C3BB2EE00DAE3BB /* DetailsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsBuilder.swift; sourceTree = "<group>"; };
+		5EDDEE722C3BC69400DAE3BB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		5EDDEE742C3BC69F00DAE3BB /* DetailsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewControllerProtocol.swift; sourceTree = "<group>"; };
+		5EDDEE762C3BC6B600DAE3BB /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		5EDDEE782C3BC6BD00DAE3BB /* DetailsPresenterIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenterIO.swift; sourceTree = "<group>"; };
+		5EDDEE7A2C3BC6CC00DAE3BB /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
+		5EDDEE7C2C3BC6D300DAE3BB /* DetailsInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractorIO.swift; sourceTree = "<group>"; };
+		5EDDEE7E2C3BC6F100DAE3BB /* DetailsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRepository.swift; sourceTree = "<group>"; };
+		5EDDEE812C3BC71300DAE3BB /* DetailsRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRepositoryProtocol.swift; sourceTree = "<group>"; };
+		5EDDEE842C3BC72E00DAE3BB /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
+		5EDDEE862C3BC74000DAE3BB /* DetailsRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouterProtocol.swift; sourceTree = "<group>"; };
+		5EDDEE882C3BC78A00DAE3BB /* DetailsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsModels.swift; sourceTree = "<group>"; };
+		5EDDEE8A2C3BD11E00DAE3BB /* CommonModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModels.swift; sourceTree = "<group>"; };
+		5EDDEE8C2C3BD8AB00DAE3BB /* MoviesAPIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAPIEndPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EDDEE702C3BC64900DAE3BB /* RxCocoa in Frameworks */,
 				5EDDEE652C3B3C1800DAE3BB /* NetworkCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +89,7 @@
 		5EDDEE4C2C3B187900DAE3BB /* MovieDetails */ = {
 			isa = PBXGroup;
 			children = (
+				5EDDEE662C3BB2AA00DAE3BB /* Details */,
 				5EDDEE4D2C3B187900DAE3BB /* AppDelegate.swift */,
 				5EDDEE4F2C3B187900DAE3BB /* SceneDelegate.swift */,
 				5EDDEE512C3B187900DAE3BB /* ViewController.swift */,
@@ -84,6 +115,83 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5EDDEE662C3BB2AA00DAE3BB /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				5EDDEE712C3BC67100DAE3BB /* Components */,
+				5EDDEE6A2C3BB30800DAE3BB /* ViewController */,
+				5EDDEE6B2C3BB30F00DAE3BB /* Presenter */,
+				5EDDEE692C3BB2FC00DAE3BB /* Interactor */,
+				5EDDEE6C2C3BB31600DAE3BB /* Router */,
+				5EDDEE6D2C3BB31E00DAE3BB /* Entity */,
+				5EDDEE672C3BB2EE00DAE3BB /* DetailsBuilder.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		5EDDEE692C3BB2FC00DAE3BB /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5EDDEE802C3BC6FE00DAE3BB /* Repository */,
+				5EDDEE7A2C3BC6CC00DAE3BB /* DetailsInteractor.swift */,
+				5EDDEE7C2C3BC6D300DAE3BB /* DetailsInteractorIO.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		5EDDEE6A2C3BB30800DAE3BB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5EDDEE722C3BC69400DAE3BB /* DetailsViewController.swift */,
+				5EDDEE742C3BC69F00DAE3BB /* DetailsViewControllerProtocol.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5EDDEE6B2C3BB30F00DAE3BB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5EDDEE762C3BC6B600DAE3BB /* DetailsPresenter.swift */,
+				5EDDEE782C3BC6BD00DAE3BB /* DetailsPresenterIO.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5EDDEE6C2C3BB31600DAE3BB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				5EDDEE842C3BC72E00DAE3BB /* DetailsRouter.swift */,
+				5EDDEE862C3BC74000DAE3BB /* DetailsRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		5EDDEE6D2C3BB31E00DAE3BB /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5EDDEE882C3BC78A00DAE3BB /* DetailsModels.swift */,
+				5EDDEE8A2C3BD11E00DAE3BB /* CommonModels.swift */,
+				5EDDEE8C2C3BD8AB00DAE3BB /* MoviesAPIEndPoint.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		5EDDEE712C3BC67100DAE3BB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5EDDEE802C3BC6FE00DAE3BB /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				5EDDEE7E2C3BC6F100DAE3BB /* DetailsRepository.swift */,
+				5EDDEE812C3BC71300DAE3BB /* DetailsRepositoryProtocol.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,6 +210,7 @@
 			name = MovieDetails;
 			packageProductDependencies = (
 				5EDDEE642C3B3C1800DAE3BB /* NetworkCore */,
+				5EDDEE6F2C3BC64900DAE3BB /* RxCocoa */,
 			);
 			productName = MovieDetails;
 			productReference = 5EDDEE4A2C3B187900DAE3BB /* MovieDetails.app */;
@@ -131,6 +240,9 @@
 				Base,
 			);
 			mainGroup = 5EDDEE412C3B187900DAE3BB;
+			packageReferences = (
+				5EDDEE6E2C3BC64900DAE3BB /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 5EDDEE4B2C3B187900DAE3BB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -157,9 +269,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EDDEE682C3BB2EE00DAE3BB /* DetailsBuilder.swift in Sources */,
+				5EDDEE7B2C3BC6CC00DAE3BB /* DetailsInteractor.swift in Sources */,
+				5EDDEE792C3BC6BD00DAE3BB /* DetailsPresenterIO.swift in Sources */,
+				5EDDEE7D2C3BC6D300DAE3BB /* DetailsInteractorIO.swift in Sources */,
 				5EDDEE522C3B187900DAE3BB /* ViewController.swift in Sources */,
+				5EDDEE852C3BC72E00DAE3BB /* DetailsRouter.swift in Sources */,
+				5EDDEE892C3BC78A00DAE3BB /* DetailsModels.swift in Sources */,
 				5EDDEE4E2C3B187900DAE3BB /* AppDelegate.swift in Sources */,
+				5EDDEE772C3BC6B600DAE3BB /* DetailsPresenter.swift in Sources */,
+				5EDDEE8D2C3BD8AB00DAE3BB /* MoviesAPIEndPoint.swift in Sources */,
+				5EDDEE7F2C3BC6F100DAE3BB /* DetailsRepository.swift in Sources */,
+				5EDDEE8B2C3BD11E00DAE3BB /* CommonModels.swift in Sources */,
 				5EDDEE502C3B187900DAE3BB /* SceneDelegate.swift in Sources */,
+				5EDDEE732C3BC69400DAE3BB /* DetailsViewController.swift in Sources */,
+				5EDDEE872C3BC74000DAE3BB /* DetailsRouterProtocol.swift in Sources */,
+				5EDDEE822C3BC71300DAE3BB /* DetailsRepositoryProtocol.swift in Sources */,
+				5EDDEE752C3BC69F00DAE3BB /* DetailsViewControllerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,10 +501,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		5EDDEE6E2C3BC64900DAE3BB /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		5EDDEE642C3B3C1800DAE3BB /* NetworkCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NetworkCore;
+		};
+		5EDDEE6F2C3BC64900DAE3BB /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5EDDEE6E2C3BC64900DAE3BB /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
