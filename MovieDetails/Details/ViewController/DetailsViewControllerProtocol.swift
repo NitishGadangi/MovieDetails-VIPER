@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import UIKit
+
+protocol DetailsViewControllerProtocol where Self: UIViewController {
+    func popOrDismiss()
+}

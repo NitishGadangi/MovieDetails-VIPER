@@ -29,3 +29,10 @@ struct GenericAsset: Decodable {
         }
     }
 }
+
+struct ErrorInfo: Error {
+    let message: String
+    init(message: String = "Oops! Something went wrong!!") {
+        self.message = message
+    }
+}

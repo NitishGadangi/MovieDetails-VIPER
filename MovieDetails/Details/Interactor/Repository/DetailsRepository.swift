@@ -8,7 +8,7 @@
 import Foundation
 import NetworkCore
 
-class DetailsRepository: DetailsRepositoryProtocol {
+final class DetailsRepository: DetailsRepositoryProtocol {
     private let networkManager: NetworkManager<MoviesAPI>
 
     init(networkManager: NetworkManager<MoviesAPI> = .init(env: .stage)) {

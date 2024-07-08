@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+protocol DetailsRouterProtocol {
+    var viewController: DetailsViewControllerProtocol? { get set }
+
+    func navigateBack()
+}

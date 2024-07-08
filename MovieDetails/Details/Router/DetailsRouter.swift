@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+final class DetailsRouter: DetailsRouterProtocol {
+    weak var viewController: (any DetailsViewControllerProtocol)?
+
+    func navigateBack() {
+        viewController?.popOrDismiss()
+    }
+}
