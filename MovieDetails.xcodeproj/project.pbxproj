@@ -28,7 +28,7 @@
 		5EDDEE892C3BC78A00DAE3BB /* DetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE882C3BC78A00DAE3BB /* DetailsModels.swift */; };
 		5EDDEE8B2C3BD11E00DAE3BB /* CommonModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE8A2C3BD11E00DAE3BB /* CommonModels.swift */; };
 		5EDDEE8D2C3BD8AB00DAE3BB /* MoviesAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE8C2C3BD8AB00DAE3BB /* MoviesAPIEndPoint.swift */; };
-		5EDDFE892C3C57EF000C78BB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDFE882C3C57EF000C78BB /* Utils.swift */; };
+		5EDDFE8C2C3C6017000C78BB /* CommonUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 5EDDFE8B2C3C6017000C78BB /* CommonUtils */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,7 +54,7 @@
 		5EDDEE882C3BC78A00DAE3BB /* DetailsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsModels.swift; sourceTree = "<group>"; };
 		5EDDEE8A2C3BD11E00DAE3BB /* CommonModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModels.swift; sourceTree = "<group>"; };
 		5EDDEE8C2C3BD8AB00DAE3BB /* MoviesAPIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAPIEndPoint.swift; sourceTree = "<group>"; };
-		5EDDFE882C3C57EF000C78BB /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		5EDDFE8A2C3C5EA7000C78BB /* CommonUtils */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CommonUtils; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EDDFE8C2C3C6017000C78BB /* CommonUtils in Frameworks */,
 				5EDDEE702C3BC64900DAE3BB /* RxCocoa in Frameworks */,
 				5EDDEE652C3B3C1800DAE3BB /* NetworkCore in Frameworks */,
 			);
@@ -98,7 +99,6 @@
 				5EDDEE562C3B187B00DAE3BB /* Assets.xcassets */,
 				5EDDEE582C3B187B00DAE3BB /* LaunchScreen.storyboard */,
 				5EDDEE5B2C3B187B00DAE3BB /* Info.plist */,
-				5EDDFE882C3C57EF000C78BB /* Utils.swift */,
 			);
 			path = MovieDetails;
 			sourceTree = "<group>";
@@ -106,6 +106,7 @@
 		5EDDEE612C3B222100DAE3BB /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				5EDDFE8A2C3C5EA7000C78BB /* CommonUtils */,
 				5EDDEE622C3B226E00DAE3BB /* NetworkCore */,
 			);
 			path = Packages;
@@ -214,6 +215,7 @@
 			packageProductDependencies = (
 				5EDDEE642C3B3C1800DAE3BB /* NetworkCore */,
 				5EDDEE6F2C3BC64900DAE3BB /* RxCocoa */,
+				5EDDFE8B2C3C6017000C78BB /* CommonUtils */,
 			);
 			productName = MovieDetails;
 			productReference = 5EDDEE4A2C3B187900DAE3BB /* MovieDetails.app */;
@@ -283,7 +285,6 @@
 				5EDDEE772C3BC6B600DAE3BB /* DetailsPresenter.swift in Sources */,
 				5EDDEE8D2C3BD8AB00DAE3BB /* MoviesAPIEndPoint.swift in Sources */,
 				5EDDEE7F2C3BC6F100DAE3BB /* DetailsRepository.swift in Sources */,
-				5EDDFE892C3C57EF000C78BB /* Utils.swift in Sources */,
 				5EDDEE8B2C3BD11E00DAE3BB /* CommonModels.swift in Sources */,
 				5EDDEE502C3B187900DAE3BB /* SceneDelegate.swift in Sources */,
 				5EDDEE732C3BC69400DAE3BB /* DetailsViewController.swift in Sources */,
@@ -525,6 +526,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5EDDEE6E2C3BC64900DAE3BB /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
+		};
+		5EDDFE8B2C3C6017000C78BB /* CommonUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CommonUtils;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
