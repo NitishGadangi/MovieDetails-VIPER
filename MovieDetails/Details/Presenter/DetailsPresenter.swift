@@ -29,6 +29,7 @@ final class DetailsPresenter: DetailsPresenterProtocol {
         self.output = DetailsPresenterOutput(showLoader: showLoader)
         self.interactor = interactor
         self.router = router
+        setupBindings()
     }
 }
 

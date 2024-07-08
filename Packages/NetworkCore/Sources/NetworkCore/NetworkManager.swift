@@ -48,6 +48,7 @@ public class NetworkManager<EndPoint: EndPointType> {
     }
 
     public func sendRequest<T: Decodable>(endPoint: EndPoint, responseType: T.Type, completion: @escaping (Result<T, NetworkError>) -> Void) {
+        print("🌐 Network Manager | Request : \(endPoint.baseURL)\(endPoint.path)")
         networkService.request(endPoint) { data, response, error in
             if error != nil {
                 let networkError = NetworkError(message: NetworkResponse.failed.rawValue)
@@ -64,9 +65,8 @@ public class NetworkManager<EndPoint: EndPointType> {
                             return
                         }
                         do {
-                            print(responseData)
                             let jsonData = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers)
-                            print(jsonData)
+                            print("🌐 Network Manager | Response : \(jsonData)")
                             let apiResponse = try JSONDecoder().decode(T.self, from: responseData)
                             completion(.success(apiResponse))
                         } catch {

@@ -1,74 +1,66 @@
 {
     "header": "Section Title",
-    "top_fold": [
+    "overview": [
         {
             "template_type": "asset_carousel_card",
-            "template_properties": {
-                "assets": [
-                    {
-                        "url": "xyz",
-                        "type": "IMAGE",
-                        "aspect_ratio": 1.8
-                    },
-                    {
-                        "url": "xyz",
-                        "type": "IMAGE",
-                        "aspect_ratio": 1.8
-                    }
-                ]
-            }
+            "assets": [
+                {
+                    "url": "xyz",
+                    "type": "IMAGE",
+                    "aspect_ratio": 1.8
+                },
+                {
+                    "url": "xyz",
+                    "type": "IMAGE",
+                    "aspect_ratio": 1.8
+                }
+            ]
         },
         {
             "template_type": "title_location_card",
-            "template_properties": {
-                "tag_text": "SPECIAL TAG - BLOCKBUSTER",
-                "title": "Title - Mad Max saga : Fury Road",
-                "sub_title": "Body text - When the world is taken by darkness, A hero will rise.",
-                "location": {
-                    "start_asset": {
-                        "url": "xyz",
-                        "type": "IMAGE",
-                        "aspect_ratio": 1.8
-                    },
-                    "text": "Cinephile, Banglore"
-                },
-                "date_time": {
-                    "start_asset": {
-                        "url": "xyz",
-                        "type": "IMAGE",
-                        "aspect_ratio": 1.8
-                    },
-                    "text": "8:30 PM, 28th July, Wednesday"
+            "title": "Title - Mad Max saga : Fury Road",
+            "sub_title": "Body text - When the world is taken by darkness, A hero will rise.",
+            "location": {
+                "text": "Cinephile, Banglore",
+                "asset": {
+                    "url": "xyz",
+                    "type": "IMAGE",
+                    "aspect_ratio": 1.8
                 }
-            }
+            },
+            "date_time": {
+                "text": "8:30 PM, 28th July, Wednesday",
+                "asset": {
+                    "url": "xyz",
+                    "type": "IMAGE",
+                    "aspect_ratio": 1.8
+                }
+            },
+            "tag": "SPECIAL TAG - BLOCKBUSTER"
         },
         {
             "template_type": "countdown_timer_card",
-            "template_properties": {
-                "end_time": 1720373784,
-                "header": "Booking will close in :"
-            }
+            "end_time": 1720373784,
+            "header": "Booking will close in :"
         },
         {
-            "template_type": "social_proofing_card",
-            "template_properties": {
-                "sub_title": "Till now 10,000+ Users have already booked tickets.",
-                "assets": [
-                    {
-                        "url": "xyz",
-                        "type": "IMAGE",
-                        "aspect_ratio": 1.8
-                    },
-                    {
-                        "url": "xyz",
-                        "type": "IMAGE",
-                        "aspect_ratio": 1.8
-                    }
-                ]
-            }
+            "description": "Till now 10,000+ Users have already booked tickets.",
+            "assets": [
+                {
+                    "url": "xyz",
+                    "type": "IMAGE",
+                    "aspect_ratio": 1.8
+                },
+                {
+                    "url": "xyz",
+                    "type": "IMAGE",
+                    "aspect_ratio": 1.8
+                }
+            ],
+            "template_type": "social_proofing_card"
         }
     ],
-    "more_details": [
+    "additional_info": [
         {
             "header": "About",
             "body": "A modern-day avatar of Vishnu, a Hindu god, who is believed to have descended to earth to protect the world from evil forces"
