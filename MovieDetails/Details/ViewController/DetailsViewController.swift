@@ -36,6 +36,14 @@ final class DetailsViewController: UIViewController, DetailsViewControllerProtoc
         return view
     }()
 
+    private let stickyPageControl: TextIndicatorPageControl = {
+        let view = TextIndicatorPageControl()
+        view.isHidden = true
+        return view
+    }()
+
+    private var isStickyPageControlConfigured: Bool = false
+
     private let loadingView: BasicLoaderView = {
         let view = BasicLoaderView()
         view.isHidden = true
@@ -79,6 +87,7 @@ private extension DetailsViewController {
     func addSubViews() {
         view.addSubviews(headerView,
                          collectionView,
+                         stickyPageControl,
                          loadingView,
                          errorView)
     }
@@ -106,6 +115,12 @@ private extension DetailsViewController {
             make.leading.leading.equalToSuperview()
             make.width.equalToSuperview()
             make.bottom.equalToSuperview()
+        }
+
+        stickyPageControl.snp.makeConstraints { make in
+            make.top.equalTo(headerView.snp.bottom)
+            make.leading.leading.equalToSuperview()
+            make.width.equalToSuperview()
         }
     }
 
@@ -136,6 +151,13 @@ private extension DetailsViewController {
         setFullScreenState(state: .loaded)
         let headerText = presenter.headerText()
         headerView.config(text: headerText)
+        if let stickyHeaderViewModel = presenter.getStickyPageControlViewModel() {
+            stickyPageControl.delegate = self
+            stickyPageControl.configure(viewModel: stickyHeaderViewModel)
+            isStickyPageControlConfigured = true
+        } else {
+            isStickyPageControlConfigured = false
+        }
         collectionView.reloadData()
     }
 }
@@ -204,6 +226,45 @@ extension DetailsViewController: UICollectionViewDelegate, UICollectionViewDataS
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle any CTAs here
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+
+        if let indexPathForPageControl = presenter.indexPathForStickyHeader(),
+           collectionView.indexPathsForVisibleItems.contains(indexPathForPageControl) {
+            updateStickyPageControl()
+        }
+    }
+
+    // logic to handle sticky header view
+    func updateStickyPageControl() {
+        guard let indexPath = presenter.indexPathForStickyHeader(),
+              let layoutAttrForPageControl = collectionView.layoutAttributesForItem(at: indexPath),
+              let collectionSuperView = collectionView.superview
+        else { return }
+        let cellFrameInSuperView = collectionView.convert(layoutAttrForPageControl.frame, to: collectionSuperView)
+        let cellFrameInSuperViewMinY = cellFrameInSuperView.minY - view.safeAreaInsets.top - SectionHeaderView.SizeConstants.height
+        let collectionSuperViewMinY = collectionSuperView.frame.minY
+        let showPageControl = cellFrameInSuperViewMinY < collectionSuperViewMinY
+        showStickyPageControl(showPageControl)
+    }
+
+    func showStickyPageControl(_ isVisible: Bool) {
+        if isVisible && isStickyPageControlConfigured {
+            stickyPageControl.isHidden = false
+        } else {
+            stickyPageControl.isHidden = true
+        }
+    }
+}
+
+extension DetailsViewController: TextPageControlDelegate {
+    func didSelectPage(index: Int) {
+        guard let indexPath = presenter.indexPathForStickyHeader(),
+              let cell = collectionView.cellForItem(at: indexPath) as? AdditionalDetailsCardCell
+        else { return }
+        stickyPageControl.selectPage(index: index)
+        cell.wrappedView.didSelectPage(index: index)
     }
 }
 

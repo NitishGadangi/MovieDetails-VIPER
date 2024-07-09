@@ -68,5 +68,6 @@ private extension SectionHeaderView {
 extension SectionHeaderView {
     struct SizeConstants {
         static var labelTopBottom: CGFloat { 18 }
+        static var height: CGFloat { 18 + 18 + 18 + 1 }
     }
 }

@@ -114,4 +114,32 @@ extension DetailsPresenter {
         let model = interactor.getDataModel()
         return model?.header
     }
+
+    func indexPathForStickyHeader() -> IndexPath? {
+        let model = interactor.getDataModel()
+        let templateItems = model?.items ?? []
+        for (idx, templateModel) in templateItems.enumerated() {
+            switch templateModel {
+                case .additionalDetailsCard:
+                    return IndexPath(row: 0, section: idx)
+                default:
+                    continue
+            }
+        }
+        return nil
+    }
+
+    func getStickyPageControlViewModel() -> AdditionalDetailsCardViewModel? {
+        let model = interactor.getDataModel()
+        let templateItems = model?.items ?? []
+        for templateModel in templateItems {
+            switch templateModel {
+                case .additionalDetailsCard(let model):
+                    return AdditionalDetailsCardViewModel(model: model.details)
+                default:
+                    continue
+            }
+        }
+        return nil
+    }
 }

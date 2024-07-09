@@ -52,8 +52,8 @@ final class TextIndicatorPageControl: UIView, ReusableView {
     }
 
     func selectPage(index: Int) {
-        collectionView.reloadData()
         currentPage = index
+        collectionView.reloadData()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [weak self] in
             let indexPath = IndexPath(row: index, section: 0)
             self?.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
@@ -67,6 +67,7 @@ final class TextIndicatorPageControl: UIView, ReusableView {
 
 private extension TextIndicatorPageControl {
     func setupUI() {
+        backgroundColor = CommonColors.pureWhite
         addSubViews()
         setupConstraints()
         setupListeners()

@@ -43,6 +43,8 @@ protocol DetailsPresenterDataProvider {
     func modelForItemAt(index: Int) -> (any ViewModellable)?
     func sizeForItemAt(index: Int) -> CGSize
     func headerText() -> String?
+    func indexPathForStickyHeader() -> IndexPath?
+    func getStickyPageControlViewModel() -> AdditionalDetailsCardViewModel?
 }
 
 typealias DetailsPresenterProtocol = DetailsPresenterIO & DetailsPresenterDataProvider
