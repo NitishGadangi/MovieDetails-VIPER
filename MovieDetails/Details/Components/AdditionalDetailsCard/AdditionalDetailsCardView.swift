@@ -29,6 +29,8 @@ final class AdditionalDetailsCardView: UIView, ReusableView {
 
     private let pageControl = TextIndicatorPageControl()
 
+    weak var delegate: AdditionalDetailsViewDelegate?
+
     private var viewModel: AdditionalDetailsCardViewModel? {
         didSet {
             setupViews()
@@ -127,6 +129,7 @@ extension AdditionalDetailsCardView: UICollectionViewDelegate, UICollectionViewD
         curIndex = max(0, curIndex)
         if pageControl.currentPage != curIndex {
             pageControl.selectPage(index: curIndex)
+            delegate?.didChangePage(index: curIndex)
         }
     }
 }
@@ -143,4 +146,8 @@ extension AdditionalDetailsCardView {
         static var bodyHeight: CGFloat { 750 }
         static var height: CGFloat { 50 + bodyHeight } // this can be improved and made dynamic
     }
+}
+
+protocol AdditionalDetailsViewDelegate: AnyObject {
+    func didChangePage(index: Int)
 }

@@ -212,6 +212,7 @@ extension DetailsViewController: UICollectionViewDelegate, UICollectionViewDataS
                 return cell
             case let viewModel as AdditionalDetailsCardViewModel:
                 let cell: AdditionalDetailsCardCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
+                cell.wrappedView.delegate = self
                 cell.wrappedView.config(viewModel: viewModel)
                 return cell
             default:
@@ -265,6 +266,12 @@ extension DetailsViewController: TextPageControlDelegate {
         else { return }
         stickyPageControl.selectPage(index: index)
         cell.wrappedView.didSelectPage(index: index)
+    }
+}
+
+extension DetailsViewController: AdditionalDetailsViewDelegate {
+    func didChangePage(index: Int) {
+        stickyPageControl.selectPage(index: index)
     }
 }
 
