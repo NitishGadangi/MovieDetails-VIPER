@@ -1,5 +1,5 @@
 {
-  "originHash" : "9ee0acf210085d5c61cb29bc73bcc378fde03144755930a20cc53646f5cb2381",
+  "originHash" : "2470422894a49eafe4bf01df33cc904534f601b5092323ce8c34206da4d4425a",
   "pins" : [
     {
       "identity" : "rxswift",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "b06a8c8596e4c3e8e7788e08e720e3248563ce6a",
         "version" : "6.7.1"
+      }
+    },
+    {
+      "identity" : "snapkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SnapKit/SnapKit.git",
+      "state" : {
+        "revision" : "2842e6e84e82eb9a8dac0100ca90d9444b0307f4",
+        "version" : "5.7.1"
       }
     }
   ],

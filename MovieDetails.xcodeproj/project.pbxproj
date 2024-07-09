@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EAD998A2C3D0CBC00BF23B7 /* CommonInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD99892C3D0CBC00BF23B7 /* CommonInsets.swift */; };
 		5EDDEE4E2C3B187900DAE3BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE4D2C3B187900DAE3BB /* AppDelegate.swift */; };
 		5EDDEE502C3B187900DAE3BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE4F2C3B187900DAE3BB /* SceneDelegate.swift */; };
 		5EDDEE522C3B187900DAE3BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE512C3B187900DAE3BB /* ViewController.swift */; };
@@ -29,9 +30,14 @@
 		5EDDEE8B2C3BD11E00DAE3BB /* CommonModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE8A2C3BD11E00DAE3BB /* CommonModels.swift */; };
 		5EDDEE8D2C3BD8AB00DAE3BB /* MoviesAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE8C2C3BD8AB00DAE3BB /* MoviesAPIEndPoint.swift */; };
 		5EDDFE8C2C3C6017000C78BB /* CommonUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 5EDDFE8B2C3C6017000C78BB /* CommonUtils */; };
+		5EDDFE942C3CFE63000C78BB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5EDDFE932C3CFE63000C78BB /* SnapKit */; };
+		5EDDFE962C3D0092000C78BB /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDFE952C3D0092000C78BB /* SectionHeaderView.swift */; };
+		5EDDFE992C3D06C4000C78BB /* CommonFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDFE982C3D06C4000C78BB /* CommonFonts.swift */; };
+		5EDDFE9B2C3D06D1000C78BB /* CommonColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDFE9A2C3D06D1000C78BB /* CommonColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5EAD99892C3D0CBC00BF23B7 /* CommonInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonInsets.swift; sourceTree = "<group>"; };
 		5EDDEE4A2C3B187900DAE3BB /* MovieDetails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDetails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EDDEE4D2C3B187900DAE3BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EDDEE4F2C3B187900DAE3BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +61,9 @@
 		5EDDEE8A2C3BD11E00DAE3BB /* CommonModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModels.swift; sourceTree = "<group>"; };
 		5EDDEE8C2C3BD8AB00DAE3BB /* MoviesAPIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAPIEndPoint.swift; sourceTree = "<group>"; };
 		5EDDFE8A2C3C5EA7000C78BB /* CommonUtils */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CommonUtils; sourceTree = "<group>"; };
+		5EDDFE952C3D0092000C78BB /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		5EDDFE982C3D06C4000C78BB /* CommonFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFonts.swift; sourceTree = "<group>"; };
+		5EDDFE9A2C3D06D1000C78BB /* CommonColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EDDFE8C2C3C6017000C78BB /* CommonUtils in Frameworks */,
+				5EDDFE942C3CFE63000C78BB /* SnapKit in Frameworks */,
 				5EDDEE702C3BC64900DAE3BB /* RxCocoa in Frameworks */,
 				5EDDEE652C3B3C1800DAE3BB /* NetworkCore in Frameworks */,
 			);
@@ -92,6 +102,7 @@
 		5EDDEE4C2C3B187900DAE3BB /* MovieDetails */ = {
 			isa = PBXGroup;
 			children = (
+				5EDDFE972C3D062B000C78BB /* Constants */,
 				5EDDEE662C3BB2AA00DAE3BB /* Details */,
 				5EDDEE4D2C3B187900DAE3BB /* AppDelegate.swift */,
 				5EDDEE4F2C3B187900DAE3BB /* SceneDelegate.swift */,
@@ -183,6 +194,12 @@
 		5EDDEE712C3BC67100DAE3BB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5EDDFE912C3CFB57000C78BB /* AdditionalDetailsCard */,
+				5EDDFE902C3CF96C000C78BB /* SocialProofingCard */,
+				5EDDFE8F2C3CF960000C78BB /* CountDownTimerCard */,
+				5EDDFE8E2C3CF956000C78BB /* TitleLocationCard */,
+				5EDDFE8D2C3CF93A000C78BB /* AssetCarouselCard */,
+				5EDDFE952C3D0092000C78BB /* SectionHeaderView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -194,6 +211,51 @@
 				5EDDEE812C3BC71300DAE3BB /* DetailsRepositoryProtocol.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		5EDDFE8D2C3CF93A000C78BB /* AssetCarouselCard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AssetCarouselCard;
+			sourceTree = "<group>";
+		};
+		5EDDFE8E2C3CF956000C78BB /* TitleLocationCard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TitleLocationCard;
+			sourceTree = "<group>";
+		};
+		5EDDFE8F2C3CF960000C78BB /* CountDownTimerCard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CountDownTimerCard;
+			sourceTree = "<group>";
+		};
+		5EDDFE902C3CF96C000C78BB /* SocialProofingCard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SocialProofingCard;
+			sourceTree = "<group>";
+		};
+		5EDDFE912C3CFB57000C78BB /* AdditionalDetailsCard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AdditionalDetailsCard;
+			sourceTree = "<group>";
+		};
+		5EDDFE972C3D062B000C78BB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				5EDDFE982C3D06C4000C78BB /* CommonFonts.swift */,
+				5EDDFE9A2C3D06D1000C78BB /* CommonColors.swift */,
+				5EAD99892C3D0CBC00BF23B7 /* CommonInsets.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +278,7 @@
 				5EDDEE642C3B3C1800DAE3BB /* NetworkCore */,
 				5EDDEE6F2C3BC64900DAE3BB /* RxCocoa */,
 				5EDDFE8B2C3C6017000C78BB /* CommonUtils */,
+				5EDDFE932C3CFE63000C78BB /* SnapKit */,
 			);
 			productName = MovieDetails;
 			productReference = 5EDDEE4A2C3B187900DAE3BB /* MovieDetails.app */;
@@ -247,6 +310,7 @@
 			mainGroup = 5EDDEE412C3B187900DAE3BB;
 			packageReferences = (
 				5EDDEE6E2C3BC64900DAE3BB /* XCRemoteSwiftPackageReference "RxSwift" */,
+				5EDDFE922C3CFE63000C78BB /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 5EDDEE4B2C3B187900DAE3BB /* Products */;
 			projectDirPath = "";
@@ -276,7 +340,9 @@
 			files = (
 				5EDDEE682C3BB2EE00DAE3BB /* DetailsBuilder.swift in Sources */,
 				5EDDEE7B2C3BC6CC00DAE3BB /* DetailsInteractor.swift in Sources */,
+				5EAD998A2C3D0CBC00BF23B7 /* CommonInsets.swift in Sources */,
 				5EDDEE792C3BC6BD00DAE3BB /* DetailsPresenterIO.swift in Sources */,
+				5EDDFE9B2C3D06D1000C78BB /* CommonColors.swift in Sources */,
 				5EDDEE7D2C3BC6D300DAE3BB /* DetailsInteractorIO.swift in Sources */,
 				5EDDEE522C3B187900DAE3BB /* ViewController.swift in Sources */,
 				5EDDEE852C3BC72E00DAE3BB /* DetailsRouter.swift in Sources */,
@@ -286,7 +352,9 @@
 				5EDDEE8D2C3BD8AB00DAE3BB /* MoviesAPIEndPoint.swift in Sources */,
 				5EDDEE7F2C3BC6F100DAE3BB /* DetailsRepository.swift in Sources */,
 				5EDDEE8B2C3BD11E00DAE3BB /* CommonModels.swift in Sources */,
+				5EDDFE992C3D06C4000C78BB /* CommonFonts.swift in Sources */,
 				5EDDEE502C3B187900DAE3BB /* SceneDelegate.swift in Sources */,
+				5EDDFE962C3D0092000C78BB /* SectionHeaderView.swift in Sources */,
 				5EDDEE732C3BC69400DAE3BB /* DetailsViewController.swift in Sources */,
 				5EDDEE872C3BC74000DAE3BB /* DetailsRouterProtocol.swift in Sources */,
 				5EDDEE822C3BC71300DAE3BB /* DetailsRepositoryProtocol.swift in Sources */,
@@ -515,6 +583,14 @@
 				minimumVersion = 6.7.1;
 			};
 		};
+		5EDDFE922C3CFE63000C78BB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -530,6 +606,11 @@
 		5EDDFE8B2C3C6017000C78BB /* CommonUtils */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CommonUtils;
+		};
+		5EDDFE932C3CFE63000C78BB /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5EDDFE922C3CFE63000C78BB /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

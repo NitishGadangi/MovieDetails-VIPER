@@ -7,9 +7,12 @@
 
 import Foundation
 import UIKit
+import SnapKit
 
 final class DetailsViewController: UIViewController, DetailsViewControllerProtocol {
     private let presenter: DetailsPresenterProtocol
+
+    private let headerView = SectionHeaderView()
 
     init(presenter: DetailsPresenterProtocol) {
         self.presenter = presenter
@@ -22,16 +25,10 @@ final class DetailsViewController: UIViewController, DetailsViewControllerProtoc
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = CommonColors.pureWhite
         setupUI()
         setupBindings()
         presenter.input.viewLoaded.onNext(())
-    }
-}
-
-extension DetailsViewController {
-    func popOrDismiss() {
-        // do any other heavy lifting if needed
-        dismiss(animated: true)
     }
 }
 
@@ -42,11 +39,28 @@ private extension DetailsViewController {
         setupViews()
     }
 
-    func addSubViews() {}
+    func addSubViews() {
+        view.addSubviews(headerView)
+    }
 
-    func setupConstraints() {}
+    func setupConstraints() {
+        headerView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.leading.trailing.equalToSuperview()
+        }
+    }
 
-    func setupViews() {}
+    func setupViews() {
+        headerView.config(text: "Section Title")
+    }
 
     func setupBindings() {}
+}
+
+// any methods that can be exposed to router via DetailsViewControllerProtocol
+extension DetailsViewController {
+    func popOrDismiss() {
+        // do any other heavy lifting if needed
+        dismiss(animated: true)
+    }
 }
