@@ -57,7 +57,9 @@ private extension CircularPageControl {
 
     func setupConstraints() {
         stackView.snp.makeConstraints { make in
-            make.top.bottom.leading.trailing.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
+            make.top.bottom.equalToSuperview()
+            make.height.equalTo(6)
         }
     }
 

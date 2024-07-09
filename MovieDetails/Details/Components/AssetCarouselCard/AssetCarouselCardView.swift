@@ -15,12 +15,13 @@ final class AssetCarouselCardView: UIView, ReusableView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        view.isPagingEnabled = true
+        view.isPagingEnabled = false
         view.register(CircularCornersAssetCell.self)
         view.showsHorizontalScrollIndicator = false
         view.showsVerticalScrollIndicator = false
         view.backgroundColor = .clear
         view.clipsToBounds = false
+        view.bounces = false
         return view
     }()
 
@@ -34,6 +35,11 @@ final class AssetCarouselCardView: UIView, ReusableView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupUI()
+    }
+
+    func reloadCollectionView() {
+        pageControl.config(count: 3)
+        collectionView.reloadData()
     }
 }
 
@@ -50,16 +56,21 @@ private extension AssetCarouselCardView {
 
     func setupConstraints() {
         collectionView.snp.makeConstraints { make in
-            make.top.leading.trailing.equalToSuperview()
+            make.top.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(CircularCornersAssetView.SizeConstants.imageHeight)
         }
 
         pageControl.snp.makeConstraints { make in
             make.top.equalTo(collectionView.snp.bottom).offset(12)
             make.centerX.equalToSuperview()
+            make.bottom.lessThanOrEqualToSuperview()
         }
     }
 
     func setupListeners() {
+        collectionView.contentInset.left = CommonInsets.leftPadding
+        collectionView.contentInset.right = CommonInsets.rightPadding
         collectionView.dataSource = self
         collectionView.delegate = self
     }
@@ -67,11 +78,12 @@ private extension AssetCarouselCardView {
 
 extension AssetCarouselCardView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return 3
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        let cell: CircularCornersAssetCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
+        return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -90,5 +102,17 @@ extension AssetCarouselCardView: UICollectionViewDelegate, UICollectionViewDataS
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // do some action if needed
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let numberOfPages = pageControl.numberOfPills
+        guard numberOfPages > 0 else { return }
+        let eachPageSize = scrollView.contentSize.width / CGFloat(numberOfPages)
+        guard eachPageSize > 0 else { return }
+        var curIndex = Int(ceil(scrollView.contentOffset.x/eachPageSize)) % numberOfPages
+        curIndex = max(0, curIndex)
+        if pageControl.selectedPill != curIndex {
+            pageControl.selectedPill = curIndex
+        }
     }
 }

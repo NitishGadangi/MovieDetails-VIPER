@@ -15,6 +15,7 @@ typealias CircularCornersAssetCell = AnyCollectionViewCell<CircularCornersAssetV
 final class CircularCornersAssetView: UIView, ReusableView {
     private let imageView: UIImageView = {
         let view = UIImageView()
+        view.backgroundColor = CommonColors.shimGrey
         view.contentMode = .scaleAspectFill
         view.clipsToBounds = true
         return view
