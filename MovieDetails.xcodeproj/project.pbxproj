@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5EAD998A2C3D0CBC00BF23B7 /* CommonInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD99892C3D0CBC00BF23B7 /* CommonInsets.swift */; };
+		5EAD998C2C3D15E800BF23B7 /* BasicErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD998B2C3D15E800BF23B7 /* BasicErrorView.swift */; };
+		5EAD998E2C3D15F900BF23B7 /* BasicLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD998D2C3D15F900BF23B7 /* BasicLoaderView.swift */; };
+		5EAD99902C3D186A00BF23B7 /* UIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD998F2C3D186A00BF23B7 /* UIModels.swift */; };
 		5EDDEE4E2C3B187900DAE3BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE4D2C3B187900DAE3BB /* AppDelegate.swift */; };
 		5EDDEE502C3B187900DAE3BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE4F2C3B187900DAE3BB /* SceneDelegate.swift */; };
 		5EDDEE522C3B187900DAE3BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE512C3B187900DAE3BB /* ViewController.swift */; };
@@ -38,6 +41,9 @@
 
 /* Begin PBXFileReference section */
 		5EAD99892C3D0CBC00BF23B7 /* CommonInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonInsets.swift; sourceTree = "<group>"; };
+		5EAD998B2C3D15E800BF23B7 /* BasicErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicErrorView.swift; sourceTree = "<group>"; };
+		5EAD998D2C3D15F900BF23B7 /* BasicLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLoaderView.swift; sourceTree = "<group>"; };
+		5EAD998F2C3D186A00BF23B7 /* UIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIModels.swift; sourceTree = "<group>"; };
 		5EDDEE4A2C3B187900DAE3BB /* MovieDetails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDetails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EDDEE4D2C3B187900DAE3BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EDDEE4F2C3B187900DAE3BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +193,7 @@
 				5EDDEE882C3BC78A00DAE3BB /* DetailsModels.swift */,
 				5EDDEE8A2C3BD11E00DAE3BB /* CommonModels.swift */,
 				5EDDEE8C2C3BD8AB00DAE3BB /* MoviesAPIEndPoint.swift */,
+				5EAD998F2C3D186A00BF23B7 /* UIModels.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -200,6 +207,8 @@
 				5EDDFE8E2C3CF956000C78BB /* TitleLocationCard */,
 				5EDDFE8D2C3CF93A000C78BB /* AssetCarouselCard */,
 				5EDDFE952C3D0092000C78BB /* SectionHeaderView.swift */,
+				5EAD998B2C3D15E800BF23B7 /* BasicErrorView.swift */,
+				5EAD998D2C3D15F900BF23B7 /* BasicLoaderView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -339,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EDDEE682C3BB2EE00DAE3BB /* DetailsBuilder.swift in Sources */,
+				5EAD998E2C3D15F900BF23B7 /* BasicLoaderView.swift in Sources */,
 				5EDDEE7B2C3BC6CC00DAE3BB /* DetailsInteractor.swift in Sources */,
 				5EAD998A2C3D0CBC00BF23B7 /* CommonInsets.swift in Sources */,
 				5EDDEE792C3BC6BD00DAE3BB /* DetailsPresenterIO.swift in Sources */,
@@ -348,8 +358,10 @@
 				5EDDEE852C3BC72E00DAE3BB /* DetailsRouter.swift in Sources */,
 				5EDDEE892C3BC78A00DAE3BB /* DetailsModels.swift in Sources */,
 				5EDDEE4E2C3B187900DAE3BB /* AppDelegate.swift in Sources */,
+				5EAD99902C3D186A00BF23B7 /* UIModels.swift in Sources */,
 				5EDDEE772C3BC6B600DAE3BB /* DetailsPresenter.swift in Sources */,
 				5EDDEE8D2C3BD8AB00DAE3BB /* MoviesAPIEndPoint.swift in Sources */,
+				5EAD998C2C3D15E800BF23B7 /* BasicErrorView.swift in Sources */,
 				5EDDEE7F2C3BC6F100DAE3BB /* DetailsRepository.swift in Sources */,
 				5EDDEE8B2C3BD11E00DAE3BB /* CommonModels.swift in Sources */,
 				5EDDFE992C3D06C4000C78BB /* CommonFonts.swift in Sources */,

@@ -14,6 +14,13 @@ final class DetailsViewController: UIViewController, DetailsViewControllerProtoc
 
     private let headerView = SectionHeaderView()
 
+    private let loadingView = BasicLoaderView()
+    private let errorView: BasicErrorView = {
+        let view = BasicErrorView()
+        view.isHidden = true
+        return view
+    }()
+
     init(presenter: DetailsPresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
@@ -25,7 +32,6 @@ final class DetailsViewController: UIViewController, DetailsViewControllerProtoc
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = CommonColors.pureWhite
         setupUI()
         setupBindings()
         presenter.input.viewLoaded.onNext(())
@@ -34,18 +40,33 @@ final class DetailsViewController: UIViewController, DetailsViewControllerProtoc
 
 private extension DetailsViewController {
     func setupUI() {
+        view.backgroundColor = CommonColors.pureWhite
         addSubViews()
         setupConstraints()
         setupViews()
     }
 
     func addSubViews() {
-        view.addSubviews(headerView)
+        view.addSubviews(headerView,
+                         loadingView,
+                         errorView)
     }
 
     func setupConstraints() {
         headerView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.leading.trailing.equalToSuperview()
+        }
+
+        loadingView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.bottom.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
+        }
+
+        errorView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.bottom.equalToSuperview()
             make.leading.trailing.equalToSuperview()
         }
     }
@@ -54,7 +75,29 @@ private extension DetailsViewController {
         headerView.config(text: "Section Title")
     }
 
-    func setupBindings() {}
+    func setupBindings() {
+        setFullScreenState(state: .loading)
+    }
+}
+
+private extension DetailsViewController {
+    func setFullScreenState(state: FullScreenStates) {
+        let hideLoadingView: Bool
+        let hideErrorView: Bool
+        switch state {
+            case .loaded:
+                hideLoadingView = true
+                hideErrorView = true
+            case .loading:
+                hideLoadingView = false
+                hideErrorView = true
+            case .error(_):
+                hideLoadingView = true
+                hideErrorView = false
+        }
+        errorView.isHidden = hideErrorView
+        loadingView.isHidden = hideLoadingView
+    }
 }
 
 // any methods that can be exposed to router via DetailsViewControllerProtocol
