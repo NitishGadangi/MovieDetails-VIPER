@@ -15,6 +15,9 @@
 		5EAD99952C3D274800BF23B7 /* SpecialTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD99942C3D274800BF23B7 /* SpecialTagView.swift */; };
 		5EAD99972C3D276200BF23B7 /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD99962C3D276200BF23B7 /* ImageTextView.swift */; };
 		5EAD999A2C3D299C00BF23B7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5EAD99992C3D299C00BF23B7 /* Kingfisher */; };
+		5EAD999C2C3D35BB00BF23B7 /* SocialProofingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD999B2C3D35BB00BF23B7 /* SocialProofingCardView.swift */; };
+		5EAD999F2C3D360600BF23B7 /* StackedAssetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD999E2C3D360600BF23B7 /* StackedAssetsView.swift */; };
+		5EAD99A12C3D36DC00BF23B7 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD99A02C3D36DC00BF23B7 /* CircularImageView.swift */; };
 		5EDDEE4E2C3B187900DAE3BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE4D2C3B187900DAE3BB /* AppDelegate.swift */; };
 		5EDDEE502C3B187900DAE3BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE4F2C3B187900DAE3BB /* SceneDelegate.swift */; };
 		5EDDEE522C3B187900DAE3BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE512C3B187900DAE3BB /* ViewController.swift */; };
@@ -51,6 +54,9 @@
 		5EAD99912C3D272600BF23B7 /* TimeLocationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLocationCardView.swift; sourceTree = "<group>"; };
 		5EAD99942C3D274800BF23B7 /* SpecialTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialTagView.swift; sourceTree = "<group>"; };
 		5EAD99962C3D276200BF23B7 /* ImageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextView.swift; sourceTree = "<group>"; };
+		5EAD999B2C3D35BB00BF23B7 /* SocialProofingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialProofingCardView.swift; sourceTree = "<group>"; };
+		5EAD999E2C3D360600BF23B7 /* StackedAssetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedAssetsView.swift; sourceTree = "<group>"; };
+		5EAD99A02C3D36DC00BF23B7 /* CircularImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
 		5EDDEE4A2C3B187900DAE3BB /* MovieDetails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDetails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EDDEE4D2C3B187900DAE3BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EDDEE4F2C3B187900DAE3BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +106,15 @@
 			children = (
 				5EAD99942C3D274800BF23B7 /* SpecialTagView.swift */,
 				5EAD99962C3D276200BF23B7 /* ImageTextView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5EAD999D2C3D35CC00BF23B7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5EAD999E2C3D360600BF23B7 /* StackedAssetsView.swift */,
+				5EAD99A02C3D36DC00BF23B7 /* CircularImageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -265,6 +280,8 @@
 		5EDDFE902C3CF96C000C78BB /* SocialProofingCard */ = {
 			isa = PBXGroup;
 			children = (
+				5EAD999D2C3D35CC00BF23B7 /* Components */,
+				5EAD999B2C3D35BB00BF23B7 /* SocialProofingCardView.swift */,
 			);
 			path = SocialProofingCard;
 			sourceTree = "<group>";
@@ -384,13 +401,16 @@
 				5EDDEE772C3BC6B600DAE3BB /* DetailsPresenter.swift in Sources */,
 				5EDDEE8D2C3BD8AB00DAE3BB /* MoviesAPIEndPoint.swift in Sources */,
 				5EAD998C2C3D15E800BF23B7 /* BasicErrorView.swift in Sources */,
+				5EAD999F2C3D360600BF23B7 /* StackedAssetsView.swift in Sources */,
 				5EAD99952C3D274800BF23B7 /* SpecialTagView.swift in Sources */,
 				5EDDEE7F2C3BC6F100DAE3BB /* DetailsRepository.swift in Sources */,
 				5EDDEE8B2C3BD11E00DAE3BB /* CommonModels.swift in Sources */,
+				5EAD999C2C3D35BB00BF23B7 /* SocialProofingCardView.swift in Sources */,
 				5EAD99922C3D272600BF23B7 /* TimeLocationCardView.swift in Sources */,
 				5EDDFE992C3D06C4000C78BB /* CommonFonts.swift in Sources */,
 				5EDDEE502C3B187900DAE3BB /* SceneDelegate.swift in Sources */,
 				5EDDFE962C3D0092000C78BB /* SectionHeaderView.swift in Sources */,
+				5EAD99A12C3D36DC00BF23B7 /* CircularImageView.swift in Sources */,
 				5EDDEE732C3BC69400DAE3BB /* DetailsViewController.swift in Sources */,
 				5EDDEE872C3BC74000DAE3BB /* DetailsRouterProtocol.swift in Sources */,
 				5EDDEE822C3BC71300DAE3BB /* DetailsRepositoryProtocol.swift in Sources */,
