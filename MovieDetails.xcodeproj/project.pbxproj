@@ -36,7 +36,6 @@
 		5EAD99C62C3DD40E00BF23B7 /* EmptyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD99C52C3DD40E00BF23B7 /* EmptyCollectionViewCell.swift */; };
 		5EDDEE4E2C3B187900DAE3BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE4D2C3B187900DAE3BB /* AppDelegate.swift */; };
 		5EDDEE502C3B187900DAE3BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE4F2C3B187900DAE3BB /* SceneDelegate.swift */; };
-		5EDDEE522C3B187900DAE3BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE512C3B187900DAE3BB /* ViewController.swift */; };
 		5EDDEE572C3B187B00DAE3BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EDDEE562C3B187B00DAE3BB /* Assets.xcassets */; };
 		5EDDEE5A2C3B187B00DAE3BB /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 5EDDEE592C3B187B00DAE3BB /* Base */; };
 		5EDDEE652C3B3C1800DAE3BB /* NetworkCore in Frameworks */ = {isa = PBXBuildFile; productRef = 5EDDEE642C3B3C1800DAE3BB /* NetworkCore */; };
@@ -92,7 +91,6 @@
 		5EDDEE4A2C3B187900DAE3BB /* MovieDetails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDetails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EDDEE4D2C3B187900DAE3BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EDDEE4F2C3B187900DAE3BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5EDDEE512C3B187900DAE3BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5EDDEE562C3B187B00DAE3BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EDDEE592C3B187B00DAE3BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EDDEE5B2C3B187B00DAE3BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -220,7 +218,6 @@
 				5EDDEE662C3BB2AA00DAE3BB /* Details */,
 				5EDDEE4D2C3B187900DAE3BB /* AppDelegate.swift */,
 				5EDDEE4F2C3B187900DAE3BB /* SceneDelegate.swift */,
-				5EDDEE512C3B187900DAE3BB /* ViewController.swift */,
 				5EDDEE562C3B187B00DAE3BB /* Assets.xcassets */,
 				5EDDEE582C3B187B00DAE3BB /* LaunchScreen.storyboard */,
 				5EDDEE5B2C3B187B00DAE3BB /* Info.plist */,
@@ -489,7 +486,6 @@
 				5EAD99C22C3DC04F00BF23B7 /* TimeLocationCardViewModel.swift in Sources */,
 				5EDDEE7D2C3BC6D300DAE3BB /* DetailsInteractorIO.swift in Sources */,
 				5EAD99A62C3D494600BF23B7 /* AssetCarouselCardView.swift in Sources */,
-				5EDDEE522C3B187900DAE3BB /* ViewController.swift in Sources */,
 				5EAD99B72C3DABDE00BF23B7 /* CountDownTimerCardView.swift in Sources */,
 				5EDDEE852C3BC72E00DAE3BB /* DetailsRouter.swift in Sources */,
 				5EAD99C42C3DC1A900BF23B7 /* AssetCarouselCardViewModel.swift in Sources */,
