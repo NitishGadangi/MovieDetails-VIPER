@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 struct CommonInsets {
     static let leftPadding: CGFloat = 16
     static let rightPadding: CGFloat = 16
+    static var screenWidth: CGFloat { UIScreen.main.bounds.width }
 
     private init() {}
 }
