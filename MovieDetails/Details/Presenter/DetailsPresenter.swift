@@ -59,6 +59,11 @@ private extension DetailsPresenter {
 }
 
 extension DetailsPresenter {
+    func numberOfTemplateItems() -> Int {
+        let model = interactor.getDataModel()
+        return model?.overview?.count ?? 0
+    }
+
     func templateTypeForItemAt(index: Int) -> DetailsTemplateType {
         let model = interactor.getDataModel()
         let templateModel = model?.overview?[safe: index]
@@ -80,6 +85,25 @@ extension DetailsPresenter {
             default:
                 return nil
         }
+    }
+
+    func sizeForItemAt(index: Int) -> CGSize {
+        let width = CommonInsets.screenWidth
+        let templateType = templateTypeForItemAt(index: index)
+        let height: CGFloat
+        switch templateType {
+            case .assetCarouselCard:
+                height = AssetCarouselCardView.SizeConstants.height
+            case .titleLocationCard:
+                height = TimeLocationCardView.SizeConstants.height
+            case .countdownTimerCard:
+                height = CountDownTimerCardView.SizeConstants.height
+            case .socialProofingCard:
+                height = SocialProofingCardView.SizeConstants.height
+            case .unknown:
+                height = 0
+        }
+        return CGSize(width: width, height: height)
     }
 
     func headerText() -> String? {

@@ -23,6 +23,7 @@ final class ImageTextView: UIView {
     private let startImage: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleAspectFit
+        view.tintColor = CommonColors.specialRed
         return view
     }()
 

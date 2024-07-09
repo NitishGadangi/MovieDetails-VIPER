@@ -57,12 +57,12 @@ private extension SocialProofingCardView {
     func setupConstraints() {
         stackedImageView.snp.makeConstraints { make in
             make.top.equalToSuperview()
-            make.leading.equalToSuperview()
+            make.leading.equalToSuperview().inset(16)
         }
 
         descriptionLabel.snp.makeConstraints { make in
             make.top.equalTo(stackedImageView.snp.bottom).offset(8)
-            make.leading.trailing.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(16)
             make.bottom.equalToSuperview()
         }
     }
@@ -82,11 +82,16 @@ private extension SocialProofingCardView {
     func getAttrBoldString(text: String) -> NSMutableAttributedString {
         return NSMutableAttributedString(
             string: text,
-            attributes: [NSAttributedString.Key.font: CommonFonts.sfBold12]
+            attributes: [
+                NSAttributedString.Key.font: CommonFonts.sfBold12,
+                NSAttributedString.Key.foregroundColor: CommonColors.specialRed
+            ]
         )
     }
+}
 
-    func getAttrDescString(text: String) -> NSMutableAttributedString {
-        return NSMutableAttributedString(string: text)
+extension SocialProofingCardView {
+    struct SizeConstants {
+        static var height: CGFloat { 32 + 8 + 20 }
     }
 }

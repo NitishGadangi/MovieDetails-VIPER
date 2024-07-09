@@ -69,7 +69,7 @@ private extension AssetCarouselCardView {
         }
 
         pageControl.snp.makeConstraints { make in
-            make.top.equalTo(collectionView.snp.bottom).offset(12)
+            make.top.equalTo(collectionView.snp.bottom).offset(SizeConstants.pageControlTop)
             make.centerX.equalToSuperview()
             make.bottom.lessThanOrEqualToSuperview()
         }
@@ -130,5 +130,13 @@ extension AssetCarouselCardView: UICollectionViewDelegate, UICollectionViewDataS
         if pageControl.selectedPill != curIndex {
             pageControl.selectedPill = curIndex
         }
+    }
+}
+
+extension AssetCarouselCardView {
+    struct SizeConstants {
+        static var imageHeight: CGFloat { CircularCornersAssetView.SizeConstants.imageHeight }
+        static var pageControlTop: CGFloat { 12 }
+        static var height: CGFloat { imageHeight + pageControlTop + 6 }
     }
 }

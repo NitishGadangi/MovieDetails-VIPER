@@ -73,28 +73,28 @@ private extension TimeLocationCardView {
 
     func setupConstraints() {
         specialTag.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.leading.trailing.equalToSuperview()
+            make.top.equalToSuperview().inset(SizeConstants.tagTop)
+            make.leading.trailing.equalToSuperview().inset(16)
         }
 
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(specialTag.snp.bottom).offset(SizeConstants.titleTop)
-            make.leading.trailing.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(16)
         }
 
         descriptionLabel.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(SizeConstants.descTop)
-            make.leading.trailing.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(16)
         }
 
         locationView.snp.makeConstraints { make in
             make.top.equalTo(descriptionLabel.snp.bottom).offset(SizeConstants.locationTop)
-            make.leading.trailing.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(16)
         }
 
         dateTimeView.snp.makeConstraints { make in
             make.top.equalTo(locationView.snp.bottom).offset(SizeConstants.dateTimeTop)
-            make.leading.trailing.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(16)
         }
     }
 
@@ -111,9 +111,13 @@ private extension TimeLocationCardView {
 
 extension TimeLocationCardView {
     struct SizeConstants {
+        static var tagTop: CGFloat { 15 }
         static var titleTop: CGFloat { 10 }
         static var descTop: CGFloat { 5 }
         static var locationTop: CGFloat { 12 }
         static var dateTimeTop: CGFloat { 8 }
+        static var height: CGFloat {
+            tagTop + 17 + titleTop + 26 + descTop + 44 + locationTop + 17 + dateTimeTop + 17 + 10
+        } // this can be improved and made dynamic
     }
 }

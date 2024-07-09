@@ -26,6 +26,7 @@ final class DetailsViewController: UIViewController, DetailsViewControllerProtoc
         view.register(CountDownTimerCell.self)
         view.register(TimeLocationCell.self)
         view.register(AssetCarouselCell.self)
+        view.register(EmptyCell.self)
         view.showsHorizontalScrollIndicator = false
         view.showsVerticalScrollIndicator = false
         view.backgroundColor = .clear
@@ -70,11 +71,13 @@ private extension DetailsViewController {
         view.backgroundColor = CommonColors.pureWhite
         addSubViews()
         setupConstraints()
+        setupListeners()
         setupViews()
     }
 
     func addSubViews() {
         view.addSubviews(headerView,
+                         collectionView,
                          loadingView,
                          errorView)
     }
@@ -96,6 +99,13 @@ private extension DetailsViewController {
             make.bottom.equalToSuperview()
             make.leading.trailing.equalToSuperview()
         }
+
+        collectionView.snp.makeConstraints { make in
+            make.top.equalTo(headerView.snp.bottom)
+            make.leading.leading.equalToSuperview()
+            make.width.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
     }
 
     func setupBindings() {
@@ -115,9 +125,17 @@ private extension DetailsViewController {
             }).disposed(by: disposeBag)
     }
 
+    func setupListeners() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.contentInset.top = 16
+    }
+
     func setupViews() {
+        setFullScreenState(state: .loaded)
         let headerText = presenter.headerText()
         headerView.config(text: headerText)
+        collectionView.reloadData()
     }
 }
 
@@ -138,6 +156,49 @@ private extension DetailsViewController {
         }
         errorView.isHidden = hideErrorView
         loadingView.isHidden = hideLoadingView
+    }
+}
+
+extension DetailsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return presenter.numberOfTemplateItems()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let viewModel = presenter.modelForItemAt(index: indexPath.section)
+        switch viewModel {
+            case let viewModel as AssetCarouselCardViewModel:
+                let cell: AssetCarouselCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
+                cell.wrappedView.config(viewModel: viewModel)
+                return cell
+            case let viewModel as TimeLocationCardViewModel:
+                let cell: TimeLocationCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
+                cell.wrappedView.config(viewModel: viewModel)
+                return cell
+            case let viewModel as CountDownTimerCardViewModel:
+                let cell: CountDownTimerCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
+                cell.wrappedView.config(viewModel: viewModel)
+                return cell
+            case let viewModel as SocialProofingCardViewModel:
+                let cell: SocialProofingCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
+                cell.wrappedView.config(viewModel: viewModel)
+                return cell
+            default:
+                let cell: EmptyCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
+                return cell
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return presenter.sizeForItemAt(index: indexPath.section)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // handle any CTAs here
     }
 }
 

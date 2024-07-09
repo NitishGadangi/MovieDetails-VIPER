@@ -24,10 +24,10 @@ struct AdditionalInfoItem: Decodable {
 }
 
 enum DetailsTemplateType: String, Decodable {
-    case assetCarouselCard
-    case titleLocationCard
-    case countdownTimerCard
-    case socialProofingCard
+    case assetCarouselCard = "asset_carousel_card"
+    case titleLocationCard = "title_location_card"
+    case countdownTimerCard = "countdown_timer_card"
+    case socialProofingCard = "social_proofing_card"
     case unknown
 
     init(from decoder: any Decoder) throws {
@@ -65,13 +65,13 @@ enum DetailsTemplateProperties: Decodable {
 
     init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        guard let templateType = try? container.decode(DetailsTemplateType.self, forKey: .templateType) else {
+        guard let tempType = try? container.decode(DetailsTemplateType.self, forKey: .templateType) else {
             self = .unknown
             return
         }
 
         let objContainer = try decoder.singleValueContainer()
-        switch templateType {
+        switch tempType {
             case .assetCarouselCard:
                 let templateProps = try objContainer.decode(AssetCarouselTemplateProperties.self)
                 self = .assetCarouselCard(templateProps)

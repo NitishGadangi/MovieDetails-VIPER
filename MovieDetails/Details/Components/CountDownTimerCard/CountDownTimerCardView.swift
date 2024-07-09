@@ -57,13 +57,13 @@ private extension CountDownTimerCardView {
     func setupConstraints() {
         topLabel.snp.makeConstraints { make in
             make.top.equalToSuperview()
-            make.leading.trailing.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(16)
         }
 
         timerLabel.snp.makeConstraints { make in
             make.top.equalTo(topLabel.snp.bottom).offset(8)
-            make.leading.trailing.equalToSuperview()
-            make.bottom.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(16)
+            make.bottom.equalToSuperview().inset(10)
         }
     }
 
@@ -72,5 +72,11 @@ private extension CountDownTimerCardView {
         if let endTime = viewModel?.model.endTime {
             timerLabel.config(timeStamp: endTime)
         }
+    }
+}
+
+extension CountDownTimerCardView {
+    struct SizeConstants {
+        static var height: CGFloat { 15 + 8 + 45 + 10 }
     }
 }

@@ -38,8 +38,10 @@ protocol DetailsPresenterIO {
 }
 
 protocol DetailsPresenterDataProvider {
+    func numberOfTemplateItems() -> Int
     func templateTypeForItemAt(index: Int) -> DetailsTemplateType
     func modelForItemAt(index: Int) -> (any ViewModellable)?
+    func sizeForItemAt(index: Int) -> CGSize
     func headerText() -> String?
 }
 

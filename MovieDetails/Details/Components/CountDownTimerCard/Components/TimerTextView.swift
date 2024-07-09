@@ -58,7 +58,8 @@ private extension TimerTextView {
     func setupConstraints() {
         wrapperView.snp.makeConstraints { make in
             make.top.bottom.equalToSuperview()
-            make.leading.trailing.equalToSuperview()
+            make.leading.equalToSuperview()
+            make.trailing.lessThanOrEqualToSuperview()
         }
 
         label.snp.makeConstraints { make in
@@ -93,7 +94,7 @@ private extension TimerTextView {
 
     func getAttrTimeDescString(text: String) -> NSMutableAttributedString {
         return NSMutableAttributedString(
-            string: "\(text) ",
+            string: " \(text)   ",
             attributes: [NSAttributedString.Key.font: CommonFonts.sfSemiBold12]
         )
     }
