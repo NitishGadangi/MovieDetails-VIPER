@@ -24,6 +24,8 @@ final class AssetCarouselCardView: UIView, ReusableView {
         return view
     }()
 
+    private let pageControl = CircularPageControl()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -43,13 +45,18 @@ private extension AssetCarouselCardView {
     }
 
     func addSubViews() {
-        addSubviews(collectionView)
+        addSubviews(collectionView, pageControl)
     }
 
     func setupConstraints() {
         collectionView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.leading.trailing.equalToSuperview()
+            make.top.leading.trailing.equalToSuperview()
+        }
+
+        pageControl.snp.makeConstraints { make in
+            make.top.equalTo(collectionView.snp.bottom).offset(12)
+            make.leading.trailing.bottom.equalToSuperview()
+            make.centerX.equalToSuperview()
         }
     }
 
