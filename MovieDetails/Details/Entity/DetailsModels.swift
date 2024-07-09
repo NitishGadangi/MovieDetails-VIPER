@@ -44,6 +44,21 @@ enum DetailsTemplateProperties: Decodable {
     case socialProofingCard(SocialProofingTemplateProperties)
     case unknown
 
+    var templateType: DetailsTemplateType {
+        switch self {
+            case .assetCarouselCard:
+                return .assetCarouselCard
+            case .titleLocationCard:
+                return .titleLocationCard
+            case .countdownTimerCard:
+                return .countdownTimerCard
+            case .socialProofingCard:
+                return .socialProofingCard
+            case .unknown:
+                return .unknown
+        }
+    }
+
     enum CodingKeys: String, CodingKey {
         case templateType = "template_type"
     }

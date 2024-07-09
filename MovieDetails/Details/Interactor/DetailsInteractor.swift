@@ -10,6 +10,7 @@ import RxSwift
 import RxCocoa
 
 final class DetailsInteractor: DetailsInteractorProtocol {
+    
     let input: DetailsInteractorInput
     let output: DetailsInteractorOutput
 
@@ -22,6 +23,7 @@ final class DetailsInteractor: DetailsInteractorProtocol {
     private let didFailToFetchData = PublishRelay<ErrorInfo>()
 
     private let disposeBag = DisposeBag()
+    private var detailsModel: DetailsResponseModel?
 
     private let repository: DetailsRepositoryProtocol
 
@@ -51,11 +53,18 @@ private extension DetailsInteractor {
             self?.dataFetchInProgress.accept(false)
             switch result {
                 case .success(let model):
+                    self?.detailsModel = model
                     self?.dataReceived.accept(model)
                 case .failure(let error):
                     let errorInfo = ErrorInfo(message: error.localizedDescription)
                     self?.didFailToFetchData.accept(errorInfo)
             }
         }
+    }
+}
+
+extension DetailsInteractor {
+    func getDataModel() -> DetailsResponseModel? {
+        return detailsModel
     }
 }

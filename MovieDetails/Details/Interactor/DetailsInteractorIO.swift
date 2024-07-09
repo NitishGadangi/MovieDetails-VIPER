@@ -38,7 +38,7 @@ protocol DetailsInteractorIO {
 }
 
 protocol DetailsInteractorDataProvider {
-    // get any data required from interactor
+    func getDataModel() -> DetailsResponseModel?
 }
 
 protocol DetailsEventLogger {

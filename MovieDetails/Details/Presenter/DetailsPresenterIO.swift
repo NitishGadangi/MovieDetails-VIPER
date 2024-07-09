@@ -20,9 +20,15 @@ struct DetailsPresenterInput {
 
 struct DetailsPresenterOutput {
     let showLoader: Driver<Bool>
+    let showError: Driver<Void>
+    let setupViews: Driver<Void>
 
-    init(showLoader: PublishRelay<Bool>) {
+    init(showLoader: PublishRelay<Bool>,
+         showError: PublishRelay<Void>,
+         setupViews: PublishRelay<Void>) {
         self.showLoader = showLoader.asDriverOrEmpty()
+        self.showError = showError.asDriverOrEmpty()
+        self.setupViews = setupViews.asDriverOrEmpty()
     }
 }
 
@@ -32,7 +38,9 @@ protocol DetailsPresenterIO {
 }
 
 protocol DetailsPresenterDataProvider {
-    // add funcs to provide data to view controller on demand
+    func templateTypeForItemAt(index: Int) -> DetailsTemplateType
+    func modelForItemAt(index: Int) -> (any ViewModellable)?
+    func headerText() -> String?
 }
 
 typealias DetailsPresenterProtocol = DetailsPresenterIO & DetailsPresenterDataProvider

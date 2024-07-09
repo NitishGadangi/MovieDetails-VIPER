@@ -25,3 +25,12 @@ public protocol ViewModellable {
     // which encapsulates UIInteractions that can be transformed to Outputs
     // func transform(input: Input) -> Output
 }
+
+// Example implementation
+public class DummyViewModel: ViewModellable {
+    public typealias DataModel = Void
+    public let model: Void
+    required public init(model: Void) {
+        self.model = model
+    }
+}

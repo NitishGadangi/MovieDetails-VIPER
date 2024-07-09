@@ -8,6 +8,9 @@
 import Foundation
 import UIKit
 import SnapKit
+import RxSwift
+import RxCocoa
+import CommonUtils
 
 final class DetailsViewController: UIViewController, DetailsViewControllerProtocol {
     private let presenter: DetailsPresenterProtocol
@@ -19,11 +22,14 @@ final class DetailsViewController: UIViewController, DetailsViewControllerProtoc
         view.isHidden = true
         return view
     }()
+
     private let errorView: BasicErrorView = {
         let view = BasicErrorView()
         view.isHidden = true
         return view
     }()
+
+    private let disposeBag = DisposeBag()
 
     init(presenter: DetailsPresenterProtocol) {
         self.presenter = presenter
@@ -75,12 +81,26 @@ private extension DetailsViewController {
         }
     }
 
-    func setupViews() {
-        headerView.config(text: "Section Title")
+    func setupBindings() {
+        presenter.output.showLoader
+            .drive(onNext: { [weak self] showLoader in
+                self?.setFullScreenState(state: showLoader ? .loading : .loaded)
+            }).disposed(by: disposeBag)
+
+        presenter.output.showError
+            .drive(onNext: { [weak self] _ in
+                self?.setFullScreenState(state: .error("Something Went Wrong"))
+            }).disposed(by: disposeBag)
+
+        presenter.output.setupViews
+            .drive(onNext: { [weak self] _ in
+                self?.setupViews()
+            }).disposed(by: disposeBag)
     }
 
-    func setupBindings() {
-
+    func setupViews() {
+        let headerText = presenter.headerText()
+        headerView.config(text: headerText)
     }
 }
 
