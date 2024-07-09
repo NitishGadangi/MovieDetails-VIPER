@@ -92,6 +92,6 @@ private extension SocialProofingCardView {
 
 extension SocialProofingCardView {
     struct SizeConstants {
-        static var height: CGFloat { 32 + 8 + 20 + 15 }
+        static var height: CGFloat { 32 + 8 + 20 + 15 } // this can be improved and made dynamic
     }
 }

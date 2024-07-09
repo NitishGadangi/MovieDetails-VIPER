@@ -141,6 +141,6 @@ extension AdditionalDetailsCardView: TextPageControlDelegate {
 extension AdditionalDetailsCardView {
     struct SizeConstants {
         static var bodyHeight: CGFloat { 750 }
-        static var height: CGFloat { 50 + bodyHeight }
+        static var height: CGFloat { 50 + bodyHeight } // this can be improved and made dynamic
     }
 }

@@ -103,7 +103,7 @@ extension DetailsPresenter {
             case .socialProofingCard:
                 height = SocialProofingCardView.SizeConstants.height
             case .additionalDetailsCard:
-                height = 800
+                height = AdditionalDetailsCardView.SizeConstants.height
             case .unknown:
                 height = 0
         }

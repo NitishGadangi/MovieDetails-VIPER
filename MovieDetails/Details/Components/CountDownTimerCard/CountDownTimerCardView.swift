@@ -77,6 +77,6 @@ private extension CountDownTimerCardView {
 
 extension CountDownTimerCardView {
     struct SizeConstants {
-        static var height: CGFloat { 15 + 8 + 45 + 10 }
+        static var height: CGFloat { 15 + 8 + 45 + 10 } // this can be improved and made dynamic
     }
 }
