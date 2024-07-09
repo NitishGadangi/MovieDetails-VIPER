@@ -14,7 +14,11 @@ final class DetailsViewController: UIViewController, DetailsViewControllerProtoc
 
     private let headerView = SectionHeaderView()
 
-    private let loadingView = BasicLoaderView()
+    private let loadingView: BasicLoaderView = {
+        let view = BasicLoaderView()
+        view.isHidden = true
+        return view
+    }()
     private let errorView: BasicErrorView = {
         let view = BasicErrorView()
         view.isHidden = true
@@ -76,7 +80,7 @@ private extension DetailsViewController {
     }
 
     func setupBindings() {
-        setFullScreenState(state: .loading)
+
     }
 }
 

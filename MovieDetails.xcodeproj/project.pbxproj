@@ -11,6 +11,10 @@
 		5EAD998C2C3D15E800BF23B7 /* BasicErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD998B2C3D15E800BF23B7 /* BasicErrorView.swift */; };
 		5EAD998E2C3D15F900BF23B7 /* BasicLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD998D2C3D15F900BF23B7 /* BasicLoaderView.swift */; };
 		5EAD99902C3D186A00BF23B7 /* UIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD998F2C3D186A00BF23B7 /* UIModels.swift */; };
+		5EAD99922C3D272600BF23B7 /* TimeLocationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD99912C3D272600BF23B7 /* TimeLocationCardView.swift */; };
+		5EAD99952C3D274800BF23B7 /* SpecialTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD99942C3D274800BF23B7 /* SpecialTagView.swift */; };
+		5EAD99972C3D276200BF23B7 /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD99962C3D276200BF23B7 /* ImageTextView.swift */; };
+		5EAD999A2C3D299C00BF23B7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5EAD99992C3D299C00BF23B7 /* Kingfisher */; };
 		5EDDEE4E2C3B187900DAE3BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE4D2C3B187900DAE3BB /* AppDelegate.swift */; };
 		5EDDEE502C3B187900DAE3BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE4F2C3B187900DAE3BB /* SceneDelegate.swift */; };
 		5EDDEE522C3B187900DAE3BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE512C3B187900DAE3BB /* ViewController.swift */; };
@@ -44,6 +48,9 @@
 		5EAD998B2C3D15E800BF23B7 /* BasicErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicErrorView.swift; sourceTree = "<group>"; };
 		5EAD998D2C3D15F900BF23B7 /* BasicLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLoaderView.swift; sourceTree = "<group>"; };
 		5EAD998F2C3D186A00BF23B7 /* UIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIModels.swift; sourceTree = "<group>"; };
+		5EAD99912C3D272600BF23B7 /* TimeLocationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLocationCardView.swift; sourceTree = "<group>"; };
+		5EAD99942C3D274800BF23B7 /* SpecialTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialTagView.swift; sourceTree = "<group>"; };
+		5EAD99962C3D276200BF23B7 /* ImageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextView.swift; sourceTree = "<group>"; };
 		5EDDEE4A2C3B187900DAE3BB /* MovieDetails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDetails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EDDEE4D2C3B187900DAE3BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EDDEE4F2C3B187900DAE3BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,12 +88,22 @@
 				5EDDFE942C3CFE63000C78BB /* SnapKit in Frameworks */,
 				5EDDEE702C3BC64900DAE3BB /* RxCocoa in Frameworks */,
 				5EDDEE652C3B3C1800DAE3BB /* NetworkCore in Frameworks */,
+				5EAD999A2C3D299C00BF23B7 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EAD99932C3D273600BF23B7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5EAD99942C3D274800BF23B7 /* SpecialTagView.swift */,
+				5EAD99962C3D276200BF23B7 /* ImageTextView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		5EDDEE412C3B187900DAE3BB = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +249,8 @@
 		5EDDFE8E2C3CF956000C78BB /* TitleLocationCard */ = {
 			isa = PBXGroup;
 			children = (
+				5EAD99932C3D273600BF23B7 /* Components */,
+				5EAD99912C3D272600BF23B7 /* TimeLocationCardView.swift */,
 			);
 			path = TitleLocationCard;
 			sourceTree = "<group>";
@@ -288,6 +307,7 @@
 				5EDDEE6F2C3BC64900DAE3BB /* RxCocoa */,
 				5EDDFE8B2C3C6017000C78BB /* CommonUtils */,
 				5EDDFE932C3CFE63000C78BB /* SnapKit */,
+				5EAD99992C3D299C00BF23B7 /* Kingfisher */,
 			);
 			productName = MovieDetails;
 			productReference = 5EDDEE4A2C3B187900DAE3BB /* MovieDetails.app */;
@@ -320,6 +340,7 @@
 			packageReferences = (
 				5EDDEE6E2C3BC64900DAE3BB /* XCRemoteSwiftPackageReference "RxSwift" */,
 				5EDDFE922C3CFE63000C78BB /* XCRemoteSwiftPackageReference "SnapKit" */,
+				5EAD99982C3D299C00BF23B7 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 5EDDEE4B2C3B187900DAE3BB /* Products */;
 			projectDirPath = "";
@@ -348,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EDDEE682C3BB2EE00DAE3BB /* DetailsBuilder.swift in Sources */,
+				5EAD99972C3D276200BF23B7 /* ImageTextView.swift in Sources */,
 				5EAD998E2C3D15F900BF23B7 /* BasicLoaderView.swift in Sources */,
 				5EDDEE7B2C3BC6CC00DAE3BB /* DetailsInteractor.swift in Sources */,
 				5EAD998A2C3D0CBC00BF23B7 /* CommonInsets.swift in Sources */,
@@ -362,8 +384,10 @@
 				5EDDEE772C3BC6B600DAE3BB /* DetailsPresenter.swift in Sources */,
 				5EDDEE8D2C3BD8AB00DAE3BB /* MoviesAPIEndPoint.swift in Sources */,
 				5EAD998C2C3D15E800BF23B7 /* BasicErrorView.swift in Sources */,
+				5EAD99952C3D274800BF23B7 /* SpecialTagView.swift in Sources */,
 				5EDDEE7F2C3BC6F100DAE3BB /* DetailsRepository.swift in Sources */,
 				5EDDEE8B2C3BD11E00DAE3BB /* CommonModels.swift in Sources */,
+				5EAD99922C3D272600BF23B7 /* TimeLocationCardView.swift in Sources */,
 				5EDDFE992C3D06C4000C78BB /* CommonFonts.swift in Sources */,
 				5EDDEE502C3B187900DAE3BB /* SceneDelegate.swift in Sources */,
 				5EDDFE962C3D0092000C78BB /* SectionHeaderView.swift in Sources */,
@@ -587,6 +611,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5EAD99982C3D299C00BF23B7 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
 		5EDDEE6E2C3BC64900DAE3BB /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
@@ -606,6 +638,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5EAD99992C3D299C00BF23B7 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5EAD99982C3D299C00BF23B7 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		5EDDEE642C3B3C1800DAE3BB /* NetworkCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NetworkCore;

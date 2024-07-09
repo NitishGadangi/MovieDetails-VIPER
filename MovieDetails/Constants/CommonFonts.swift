@@ -9,6 +9,7 @@ import UIKit
 
 struct CommonFonts {
     // 700 - Bold
+    static let sfBold12 = UIFont.systemFont(ofSize: 12, weight: .bold)
     static let sfBold18 = UIFont.systemFont(ofSize: 18, weight: .bold)
     static let sfBold20 = UIFont.systemFont(ofSize: 20, weight: .bold)
 
@@ -16,6 +17,7 @@ struct CommonFonts {
     static let sfSemiBold12 = UIFont.systemFont(ofSize: 12, weight: .semibold)
 
     // 500 - Medium
+    static let sfMedium14 = UIFont.systemFont(ofSize: 14, weight: .medium)
     static let sfMedium16 = UIFont.systemFont(ofSize: 16, weight: .medium)
 
     // 400 - Regular
