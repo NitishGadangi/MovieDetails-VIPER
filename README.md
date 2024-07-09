@@ -6,11 +6,13 @@ https://github.com/NitishGadangi/MovieDetails-VIPER/assets/29014716/e653e746-6d1
 
 ## Details
 Few key details of the implementation
-- Templatised UI. The arrangement of templates is fully Backend driven.
-- All layers were implemented and properly integrated.
-- Network layer with mock response, can be replaced with actual api and things work seamlessly.
+- Built scalable & production ready.
+- Templatised UI. The content & arrangement of UI Elements is fully Backend driven.
+- All VIPER layers were implemented and properly integrated.
+- Network layer with mock response, can be replaced with actual api and things will still work seamlessly.
 - Network & Common Utils are added a separate modules
-- Full VIPER implementation with RX subscriptions
+- Rx Swift for reactive subscriptions.
+- VIPER on the parent level. MVVM on the view level.
 
 
 ## API Response Mock
