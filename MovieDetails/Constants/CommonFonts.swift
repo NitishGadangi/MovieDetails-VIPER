@@ -15,6 +15,7 @@ struct CommonFonts {
 
     // 600 - SemiBold
     static let sfSemiBold12 = UIFont.systemFont(ofSize: 12, weight: .semibold)
+    static let sfSemiBold20 = UIFont.systemFont(ofSize: 20, weight: .semibold)
 
     // 500 - Medium
     static let sfMedium14 = UIFont.systemFont(ofSize: 14, weight: .medium)
@@ -22,6 +23,7 @@ struct CommonFonts {
 
     // 400 - Regular
     static let sfRegular16 = UIFont.systemFont(ofSize: 16, weight: .regular)
+    static let sfRegular12 = UIFont.systemFont(ofSize: 12, weight: .regular)
 
     private init() {}
 }

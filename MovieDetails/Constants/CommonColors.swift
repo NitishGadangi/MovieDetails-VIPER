@@ -20,6 +20,7 @@ struct CommonColors {
     static let lightGrey = UIColor(hex: "#E6E4EB")
     static let dullGrey = UIColor(hex: "#D9D9D9")
     static let shimGrey = UIColor(hex: "#E8E8E8")
+    static let veryLightGrey = UIColor(hex: "#F8F8F8")
 
     static let specialRed = UIColor(hex: "#D61F69")
 
