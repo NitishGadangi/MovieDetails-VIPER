@@ -125,5 +125,117 @@ Few key details of the implementation
 }
 ```
 
-## Dependency Tree & Other Details will add soon
-Will be updated
+## Project Folder Structure
+```
+.
+├── LICENSE
+├── MovieDetails
+│   ├── AppDelegate.swift
+│   ├── Constants
+│   │   ├── CommonColors.swift
+│   │   ├── CommonFonts.swift
+│   │   └── CommonInsets.swift
+│   ├── Details
+│   │   ├── Components
+│   │   │   ├── AdditionalDetailsCard
+│   │   │   │   ├── AdditionalDetailsCardView.swift
+│   │   │   │   ├── AdditionalDetailsCardViewModel.swift
+│   │   │   │   └── Components
+│   │   │   │       ├── AdditionalDetailsItemView.swift
+│   │   │   │       └── TextIndicatorPageControl
+│   │   │   │           ├── TextIndicatorItemView.swift
+│   │   │   │           └── TextIndicatorPageControl.swift
+│   │   │   ├── AssetCarouselCard
+│   │   │   │   ├── AssetCarouselCardView.swift
+│   │   │   │   ├── AssetCarouselCardViewModel.swift
+│   │   │   │   └── Components
+│   │   │   │       ├── CircularCornersAssetView.swift
+│   │   │   │       └── CircularPageControl
+│   │   │   │           ├── CircularPageControl.swift
+│   │   │   │           └── CircularPageControlItemView.swift
+│   │   │   ├── BasicErrorView.swift
+│   │   │   ├── BasicLoaderView.swift
+│   │   │   ├── CountDownTimerCard
+│   │   │   │   ├── Components
+│   │   │   │   │   └── TimerTextView.swift
+│   │   │   │   ├── CountDownTimerCardView.swift
+│   │   │   │   └── CountDownTimerCardViewModel.swift
+│   │   │   ├── EmptyCollectionViewCell.swift
+│   │   │   ├── SectionHeaderView.swift
+│   │   │   ├── SocialProofingCard
+│   │   │   │   ├── Components
+│   │   │   │   │   ├── CircularImageView.swift
+│   │   │   │   │   └── StackedAssetsView.swift
+│   │   │   │   ├── SocialProofingCardView.swift
+│   │   │   │   └── SocialProofingCardViewModel.swift
+│   │   │   └── TitleLocationCard
+│   │   │       ├── Components
+│   │   │       │   ├── ImageTextView.swift
+│   │   │       │   └── SpecialTagView.swift
+│   │   │       ├── TimeLocationCardView.swift
+│   │   │       └── TimeLocationCardViewModel.swift
+│   │   ├── DetailsBuilder.swift
+│   │   ├── Entity
+│   │   │   ├── CommonModels.swift
+│   │   │   ├── DetailsModels.swift
+│   │   │   ├── MoviesAPIEndPoint.swift
+│   │   │   └── UIModels.swift
+│   │   ├── Interactor
+│   │   │   ├── DetailsInteractor.swift
+│   │   │   ├── DetailsInteractorIO.swift
+│   │   │   └── Repository
+│   │   │       ├── DetailsRepository.swift
+│   │   │       └── DetailsRepositoryProtocol.swift
+│   │   ├── Presenter
+│   │   │   ├── DetailsPresenter.swift
+│   │   │   └── DetailsPresenterIO.swift
+│   │   ├── Router
+│   │   │   ├── DetailsRouter.swift
+│   │   │   └── DetailsRouterProtocol.swift
+│   │   └── ViewController
+│   │       ├── DetailsViewController.swift
+│   │       └── DetailsViewControllerProtocol.swift
+│   ├── Info.plist
+│   └── SceneDelegate.swift
+├── MovieDetails.xcodeproj
+├── Packages
+│   ├── CommonUtils
+│   │   ├── Package.swift
+│   │   ├── Sources
+│   │   │   └── CommonUtils
+│   │   │       ├── AnyCollectionViewCell.swift
+│   │   │       ├── BaseViperUtils.swift
+│   │   │       ├── Collection+Extensions.swift
+│   │   │       ├── DateTimeUtils.swift
+│   │   │       ├── ReusableView.swift
+│   │   │       ├── RxSwift+Extensions.swift
+│   │   │       ├── String+Extensions.swift
+│   │   │       ├── UICollectionView+Extensions.swift
+│   │   │       ├── UIColor+Extensions.swift
+│   │   │       ├── UIImageView+Extensions.swift
+│   │   │       ├── UIStackView+Extensions.swift
+│   │   │       └── UIView+Extensions.swift
+│   └── NetworkCore
+│       ├── Package.swift
+│       ├── Sources
+│       │   └── NetworkCore
+│       │       ├── Core
+│       │       │   ├── EndpointType.swift
+│       │       │   ├── HTTPHeaders.swift
+│       │       │   ├── HTTPMethod.swift
+│       │       │   ├── HTTPTask.swift
+│       │       │   ├── NetworkError.swift
+│       │       │   └── NetworkLogger.swift
+│       │       ├── MockResponses
+│       │       │   └── movie_detail_response.json
+│       │       ├── NetworkManager.swift
+│       │       └── Service
+│       │           ├── NetworkService.swift
+│       │           ├── NetworkServiceMock.swift
+│       │           └── NetworkServiceable.swift
+└── README.md
+
+52 directories, 86 files
+```
+
+## Other Details will be added soon
