@@ -34,6 +34,12 @@ final class TimeLocationCardView: UIView, ReusableView {
 
     private let dateTimeView = ImageTextView()
 
+    private var viewModel: TimeLocationCardViewModel? {
+        didSet {
+            setupViews()
+        }
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -43,13 +49,16 @@ final class TimeLocationCardView: UIView, ReusableView {
         super.init(coder: coder)
         setupUI()
     }
+
+    func config(viewModel: TimeLocationCardViewModel) {
+        self.viewModel = viewModel
+    }
 }
 
 private extension TimeLocationCardView {
     func setupUI() {
         addSubViews()
         setupConstraints()
-        setupListeners()
     }
 
     func addSubViews() {
@@ -87,7 +96,15 @@ private extension TimeLocationCardView {
         }
     }
 
-    func setupListeners() {}
+    func setupViews() {
+        specialTag.config(text: viewModel?.model.tag)
+        titleLabel.text = viewModel?.model.title
+        descriptionLabel.text = viewModel?.model.subTitle
+        let locationModel = viewModel?.model.location
+        locationView.config(imgUrl: locationModel?.asset?.url, text: locationModel?.text)
+        let dateTimeModel = viewModel?.model.dateTime
+        dateTimeView.config(imgUrl: dateTimeModel?.asset?.url, text: dateTimeModel?.text)
+    }
 }
 
 extension TimeLocationCardView {

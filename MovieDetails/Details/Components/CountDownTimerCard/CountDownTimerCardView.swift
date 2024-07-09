@@ -21,6 +21,12 @@ final class CountDownTimerCardView: UIView, ReusableView {
 
     private let timerLabel = TimerTextView()
 
+    private var viewModel: CountDownTimerCardViewModel? {
+        didSet {
+            setupViews()
+        }
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -30,13 +36,16 @@ final class CountDownTimerCardView: UIView, ReusableView {
         super.init(coder: coder)
         setupUI()
     }
+
+    func config(viewModel: CountDownTimerCardViewModel) {
+        self.viewModel = viewModel
+    }
 }
 
 private extension CountDownTimerCardView {
     func setupUI() {
         addSubViews()
         setupConstraints()
-        setupListeners()
     }
 
     func addSubViews() {
@@ -56,5 +65,10 @@ private extension CountDownTimerCardView {
         }
     }
 
-    func setupListeners() {}
+    func setupViews() {
+        topLabel.text = viewModel?.model.header
+        if let endTime = viewModel?.model.endTime {
+            timerLabel.config(timeStamp: endTime)
+        }
+    }
 }

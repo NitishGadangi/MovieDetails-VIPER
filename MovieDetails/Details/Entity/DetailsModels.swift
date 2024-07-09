@@ -100,7 +100,7 @@ struct TextWithAssetModel: Decodable {
 
 struct CountDownTimerTemplateProperties: Decodable {
     let header: String?
-    let endTime: Int
+    let endTime: Double
 
     enum CodingKeys: String, CodingKey {
         case header

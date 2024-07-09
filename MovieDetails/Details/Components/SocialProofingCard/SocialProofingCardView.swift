@@ -21,6 +21,12 @@ final class SocialProofingCardView: UIView, ReusableView {
 
     private let stackedImageView = StackedAssetsView()
 
+    private var viewModel: SocialProofingCardViewModel? {
+        didSet {
+            setupViews()
+        }
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -31,6 +37,9 @@ final class SocialProofingCardView: UIView, ReusableView {
         setupUI()
     }
 
+    func config(viewModel: SocialProofingCardViewModel) {
+        self.viewModel = viewModel
+    }
 }
 
 private extension SocialProofingCardView {
@@ -54,6 +63,11 @@ private extension SocialProofingCardView {
             make.leading.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
         }
+    }
+
+    func setupViews() {
+        stackedImageView.config(assets: viewModel?.model.assets ?? [])
+        setupDescriptionLabel()
     }
 
     func setupDescriptionLabel() {

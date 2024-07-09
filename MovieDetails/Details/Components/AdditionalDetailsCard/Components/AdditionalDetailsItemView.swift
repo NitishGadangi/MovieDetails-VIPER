@@ -30,6 +30,10 @@ final class AdditionalDetailsItemView: UIView, ReusableView {
         super.init(coder: coder)
         setupUI()
     }
+
+    func config(text: String?) {
+        label.text = text
+    }
 }
 
 private extension AdditionalDetailsItemView {

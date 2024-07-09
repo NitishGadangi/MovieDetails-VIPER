@@ -27,6 +27,12 @@ final class AdditionalDetailsCardView: UIView {
 
     private let pageControl = TextIndicatorPageControl()
 
+    private var viewModel: AdditionalDetailsCardViewModel? {
+        didSet {
+            setupViews()
+        }
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -35,6 +41,10 @@ final class AdditionalDetailsCardView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupUI()
+    }
+
+    func config(viewModel: AdditionalDetailsCardViewModel) {
+        self.viewModel = viewModel
     }
 }
 
@@ -66,15 +76,24 @@ private extension AdditionalDetailsCardView {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
+
+    func setupViews() {
+        guard let viewModel else { return }
+        pageControl.configure(viewModel: viewModel)
+        collectionView.reloadData()
+    }
 }
 
 extension AdditionalDetailsCardView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return viewModel?.model?.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: AdditionalDetailsCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
+        if let bodyText = viewModel?.bodyAt(index: indexPath.row) {
+            cell.wrappedView.config(text: bodyText)
+        }
         return cell
     }
 

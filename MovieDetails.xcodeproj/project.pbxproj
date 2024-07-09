@@ -28,6 +28,11 @@
 		5EAD99B52C3D82E000BF23B7 /* AdditionalDetailsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD99B42C3D82E000BF23B7 /* AdditionalDetailsItemView.swift */; };
 		5EAD99B72C3DABDE00BF23B7 /* CountDownTimerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD99B62C3DABDE00BF23B7 /* CountDownTimerCardView.swift */; };
 		5EAD99BA2C3DAC0200BF23B7 /* TimerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD99B92C3DAC0200BF23B7 /* TimerTextView.swift */; };
+		5EAD99BC2C3DB97000BF23B7 /* AdditionalDetailsCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD99BB2C3DB97000BF23B7 /* AdditionalDetailsCardViewModel.swift */; };
+		5EAD99BE2C3DBE0800BF23B7 /* SocialProofingCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD99BD2C3DBE0800BF23B7 /* SocialProofingCardViewModel.swift */; };
+		5EAD99C02C3DBF7000BF23B7 /* CountDownTimerCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD99BF2C3DBF7000BF23B7 /* CountDownTimerCardViewModel.swift */; };
+		5EAD99C22C3DC04F00BF23B7 /* TimeLocationCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD99C12C3DC04F00BF23B7 /* TimeLocationCardViewModel.swift */; };
+		5EAD99C42C3DC1A900BF23B7 /* AssetCarouselCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD99C32C3DC1A900BF23B7 /* AssetCarouselCardViewModel.swift */; };
 		5EDDEE4E2C3B187900DAE3BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE4D2C3B187900DAE3BB /* AppDelegate.swift */; };
 		5EDDEE502C3B187900DAE3BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE4F2C3B187900DAE3BB /* SceneDelegate.swift */; };
 		5EDDEE522C3B187900DAE3BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDEE512C3B187900DAE3BB /* ViewController.swift */; };
@@ -77,6 +82,11 @@
 		5EAD99B42C3D82E000BF23B7 /* AdditionalDetailsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalDetailsItemView.swift; sourceTree = "<group>"; };
 		5EAD99B62C3DABDE00BF23B7 /* CountDownTimerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimerCardView.swift; sourceTree = "<group>"; };
 		5EAD99B92C3DAC0200BF23B7 /* TimerTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTextView.swift; sourceTree = "<group>"; };
+		5EAD99BB2C3DB97000BF23B7 /* AdditionalDetailsCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalDetailsCardViewModel.swift; sourceTree = "<group>"; };
+		5EAD99BD2C3DBE0800BF23B7 /* SocialProofingCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialProofingCardViewModel.swift; sourceTree = "<group>"; };
+		5EAD99BF2C3DBF7000BF23B7 /* CountDownTimerCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimerCardViewModel.swift; sourceTree = "<group>"; };
+		5EAD99C12C3DC04F00BF23B7 /* TimeLocationCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLocationCardViewModel.swift; sourceTree = "<group>"; };
+		5EAD99C32C3DC1A900BF23B7 /* AssetCarouselCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCarouselCardViewModel.swift; sourceTree = "<group>"; };
 		5EDDEE4A2C3B187900DAE3BB /* MovieDetails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDetails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EDDEE4D2C3B187900DAE3BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EDDEE4F2C3B187900DAE3BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -323,6 +333,7 @@
 			children = (
 				5EAD99A42C3D463500BF23B7 /* Components */,
 				5EAD99A52C3D494600BF23B7 /* AssetCarouselCardView.swift */,
+				5EAD99C32C3DC1A900BF23B7 /* AssetCarouselCardViewModel.swift */,
 			);
 			path = AssetCarouselCard;
 			sourceTree = "<group>";
@@ -332,6 +343,7 @@
 			children = (
 				5EAD99932C3D273600BF23B7 /* Components */,
 				5EAD99912C3D272600BF23B7 /* TimeLocationCardView.swift */,
+				5EAD99C12C3DC04F00BF23B7 /* TimeLocationCardViewModel.swift */,
 			);
 			path = TitleLocationCard;
 			sourceTree = "<group>";
@@ -341,6 +353,7 @@
 			children = (
 				5EAD99B82C3DABE300BF23B7 /* Components */,
 				5EAD99B62C3DABDE00BF23B7 /* CountDownTimerCardView.swift */,
+				5EAD99BF2C3DBF7000BF23B7 /* CountDownTimerCardViewModel.swift */,
 			);
 			path = CountDownTimerCard;
 			sourceTree = "<group>";
@@ -350,6 +363,7 @@
 			children = (
 				5EAD999D2C3D35CC00BF23B7 /* Components */,
 				5EAD999B2C3D35BB00BF23B7 /* SocialProofingCardView.swift */,
+				5EAD99BD2C3DBE0800BF23B7 /* SocialProofingCardViewModel.swift */,
 			);
 			path = SocialProofingCard;
 			sourceTree = "<group>";
@@ -359,6 +373,7 @@
 			children = (
 				5EAD99B32C3D82C000BF23B7 /* Components */,
 				5EAD99AC2C3D74B700BF23B7 /* AdditionalDetailsCardView.swift */,
+				5EAD99BB2C3DB97000BF23B7 /* AdditionalDetailsCardViewModel.swift */,
 			);
 			path = AdditionalDetailsCard;
 			sourceTree = "<group>";
@@ -463,19 +478,23 @@
 				5EAD998A2C3D0CBC00BF23B7 /* CommonInsets.swift in Sources */,
 				5EDDEE792C3BC6BD00DAE3BB /* DetailsPresenterIO.swift in Sources */,
 				5EAD99BA2C3DAC0200BF23B7 /* TimerTextView.swift in Sources */,
+				5EAD99BC2C3DB97000BF23B7 /* AdditionalDetailsCardViewModel.swift in Sources */,
 				5EAD99A32C3D462800BF23B7 /* CircularCornersAssetView.swift in Sources */,
 				5EDDFE9B2C3D06D1000C78BB /* CommonColors.swift in Sources */,
 				5EAD99B22C3D758900BF23B7 /* TextIndicatorPageControl.swift in Sources */,
+				5EAD99C22C3DC04F00BF23B7 /* TimeLocationCardViewModel.swift in Sources */,
 				5EDDEE7D2C3BC6D300DAE3BB /* DetailsInteractorIO.swift in Sources */,
 				5EAD99A62C3D494600BF23B7 /* AssetCarouselCardView.swift in Sources */,
 				5EDDEE522C3B187900DAE3BB /* ViewController.swift in Sources */,
 				5EAD99B72C3DABDE00BF23B7 /* CountDownTimerCardView.swift in Sources */,
 				5EDDEE852C3BC72E00DAE3BB /* DetailsRouter.swift in Sources */,
+				5EAD99C42C3DC1A900BF23B7 /* AssetCarouselCardViewModel.swift in Sources */,
 				5EDDEE892C3BC78A00DAE3BB /* DetailsModels.swift in Sources */,
 				5EAD99B52C3D82E000BF23B7 /* AdditionalDetailsItemView.swift in Sources */,
 				5EAD99B02C3D757B00BF23B7 /* TextIndicatorItemView.swift in Sources */,
 				5EDDEE4E2C3B187900DAE3BB /* AppDelegate.swift in Sources */,
 				5EAD99902C3D186A00BF23B7 /* UIModels.swift in Sources */,
+				5EAD99C02C3DBF7000BF23B7 /* CountDownTimerCardViewModel.swift in Sources */,
 				5EDDEE772C3BC6B600DAE3BB /* DetailsPresenter.swift in Sources */,
 				5EDDEE8D2C3BD8AB00DAE3BB /* MoviesAPIEndPoint.swift in Sources */,
 				5EAD998C2C3D15E800BF23B7 /* BasicErrorView.swift in Sources */,
@@ -495,6 +514,7 @@
 				5EDDEE822C3BC71300DAE3BB /* DetailsRepositoryProtocol.swift in Sources */,
 				5EDDEE752C3BC69F00DAE3BB /* DetailsViewControllerProtocol.swift in Sources */,
 				5EAD99A82C3D4DCA00BF23B7 /* CircularPageControl.swift in Sources */,
+				5EAD99BE2C3DBE0800BF23B7 /* SocialProofingCardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

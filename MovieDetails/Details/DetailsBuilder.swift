@@ -8,10 +8,7 @@
 import Foundation
 import UIKit
 import NetworkCore
-
-protocol VIPERBaseBuilder {
-    static func build() -> UIViewController
-}
+import CommonUtils
 
 struct MovieDetailsBuilder: VIPERBaseBuilder {
     static func build() -> UIViewController {

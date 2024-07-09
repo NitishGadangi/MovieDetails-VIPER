@@ -27,6 +27,12 @@ final class AssetCarouselCardView: UIView, ReusableView {
 
     private let pageControl = CircularPageControl()
 
+    private var viewModel: AssetCarouselCardViewModel? {
+        didSet {
+            setupViews()
+        }
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -37,9 +43,8 @@ final class AssetCarouselCardView: UIView, ReusableView {
         setupUI()
     }
 
-    func reloadCollectionView() {
-        pageControl.config(count: 3)
-        collectionView.reloadData()
+    func config(viewModel: AssetCarouselCardViewModel) {
+        self.viewModel = viewModel
     }
 }
 
@@ -74,15 +79,24 @@ private extension AssetCarouselCardView {
         collectionView.dataSource = self
         collectionView.delegate = self
     }
+
+    func setupViews() {
+        let numOfPages = viewModel?.model.assets?.count ?? 0
+        pageControl.config(count: numOfPages)
+        collectionView.reloadData()
+    }
 }
 
 extension AssetCarouselCardView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return viewModel?.model.assets?.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: CircularCornersAssetCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
+        if let assetUrl = viewModel?.assetUrlAt(index: indexPath.row) {
+            cell.wrappedView.config(imgUrl: assetUrl)
+        }
         return cell
     }
 

@@ -33,6 +33,12 @@ final class TextIndicatorPageControl: UIView, ReusableView {
 
     private(set) var currentPage: Int = 0
 
+    private var viewModel: AdditionalDetailsCardViewModel? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+
     weak var delegate: TextPageControlDelegate?
 
     override init(frame: CGRect) {
@@ -52,6 +58,10 @@ final class TextIndicatorPageControl: UIView, ReusableView {
             let indexPath = IndexPath(row: index, section: 0)
             self?.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }
+    }
+
+    func configure(viewModel: AdditionalDetailsCardViewModel) {
+        self.viewModel = viewModel
     }
 }
 
@@ -89,11 +99,15 @@ private extension TextIndicatorPageControl {
 
 extension TextIndicatorPageControl: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return viewModel?.model?.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: TextIndicatorItemCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
+        let isSelected = indexPath.row == currentPage
+        if let header = viewModel?.headerAt(index: indexPath.row) {
+            cell.wrappedView.config(text: header, isSelected: isSelected)
+        }
         return cell
     }
 
