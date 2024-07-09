@@ -10,6 +10,8 @@ import UIKit
 import CommonUtils
 import SnapKit
 
+typealias SocialProofingCell = AnyCollectionViewCell<SocialProofingCardView>
+
 final class SocialProofingCardView: UIView, ReusableView {
     private let descriptionLabel: UILabel = {
         let view = UILabel()

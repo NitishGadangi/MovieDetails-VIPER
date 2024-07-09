@@ -10,6 +10,8 @@ import UIKit
 import CommonUtils
 import SnapKit
 
+typealias TimeLocationCell = AnyCollectionViewCell<TimeLocationCardView>
+
 final class TimeLocationCardView: UIView, ReusableView {
 
     private let specialTag = SpecialTagView()

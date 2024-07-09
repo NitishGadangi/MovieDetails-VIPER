@@ -10,6 +10,8 @@ import UIKit
 import CommonUtils
 import SnapKit
 
+typealias AssetCarouselCell = AnyCollectionViewCell<AssetCarouselCardView>
+
 final class AssetCarouselCardView: UIView, ReusableView {
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()

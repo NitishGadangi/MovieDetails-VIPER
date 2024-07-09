@@ -10,6 +10,8 @@ import CommonUtils
 import UIKit
 import SnapKit
 
+typealias CountDownTimerCell = AnyCollectionViewCell<CountDownTimerCardView>
+
 final class CountDownTimerCardView: UIView, ReusableView {
     private let topLabel: UILabel = {
         let view = UILabel()

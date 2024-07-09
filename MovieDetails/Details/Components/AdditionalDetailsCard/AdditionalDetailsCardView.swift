@@ -10,7 +10,9 @@ import UIKit
 import SnapKit
 import CommonUtils
 
-final class AdditionalDetailsCardView: UIView {
+typealias AdditionalDetailsCardCell = AnyCollectionViewCell<AdditionalDetailsCardView>
+
+final class AdditionalDetailsCardView: UIView, ReusableView {
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal

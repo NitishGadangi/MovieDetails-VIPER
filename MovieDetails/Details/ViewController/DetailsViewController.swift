@@ -17,6 +17,23 @@ final class DetailsViewController: UIViewController, DetailsViewControllerProtoc
 
     private let headerView = SectionHeaderView()
 
+    private let collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        view.isPagingEnabled = false
+        view.register(SocialProofingCell.self)
+        view.register(CountDownTimerCell.self)
+        view.register(TimeLocationCell.self)
+        view.register(AssetCarouselCell.self)
+        view.showsHorizontalScrollIndicator = false
+        view.showsVerticalScrollIndicator = false
+        view.backgroundColor = .clear
+        view.clipsToBounds = true
+        view.bounces = false
+        return view
+    }()
+
     private let loadingView: BasicLoaderView = {
         let view = BasicLoaderView()
         view.isHidden = true
