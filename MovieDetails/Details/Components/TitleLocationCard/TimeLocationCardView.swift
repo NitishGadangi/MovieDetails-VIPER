@@ -115,7 +115,7 @@ extension TimeLocationCardView {
         static var titleTop: CGFloat { 10 }
         static var descTop: CGFloat { 5 }
         static var locationTop: CGFloat { 12 }
-        static var dateTimeTop: CGFloat { 8 }
+        static var dateTimeTop: CGFloat { 10 }
         static var height: CGFloat {
             tagTop + 17 + titleTop + 26 + descTop + 44 + locationTop + 17 + dateTimeTop + 17 + 10
         } // this can be improved and made dynamic

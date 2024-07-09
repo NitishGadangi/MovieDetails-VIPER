@@ -81,6 +81,7 @@ private extension AdditionalDetailsCardView {
 
     func setupViews() {
         guard let viewModel else { return }
+        pageControl.delegate = self
         pageControl.configure(viewModel: viewModel)
         collectionView.reloadData()
     }
@@ -109,7 +110,7 @@ extension AdditionalDetailsCardView: UICollectionViewDelegate, UICollectionViewD
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = CommonInsets.screenWidth
-        let height: CGFloat = 300
+        let height: CGFloat = SizeConstants.bodyHeight
         return CGSize(width: width, height: height)
     }
 
@@ -130,10 +131,16 @@ extension AdditionalDetailsCardView: UICollectionViewDelegate, UICollectionViewD
     }
 }
 
-
 extension AdditionalDetailsCardView: TextPageControlDelegate {
     func didSelectPage(index: Int) {
         let indexPath = IndexPath(row: index, section: 0)
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    }
+}
+
+extension AdditionalDetailsCardView {
+    struct SizeConstants {
+        static var bodyHeight: CGFloat { 750 }
+        static var height: CGFloat { 50 + bodyHeight }
     }
 }

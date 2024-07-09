@@ -9,18 +9,7 @@ import Foundation
 
 struct DetailsResponseModel: Decodable {
     let header: String?
-    let overview: [DetailsTemplateProperties]?
-    let additionalInfo: [AdditionalInfoItem]?
-
-    enum CodingKeys: String, CodingKey {
-        case header, overview
-        case additionalInfo = "additional_info"
-    }
-}
-
-struct AdditionalInfoItem: Decodable {
-    let header: String?
-    let body: String?
+    let items: [DetailsTemplateProperties]?
 }
 
 enum DetailsTemplateType: String, Decodable {
@@ -28,6 +17,7 @@ enum DetailsTemplateType: String, Decodable {
     case titleLocationCard = "title_location_card"
     case countdownTimerCard = "countdown_timer_card"
     case socialProofingCard = "social_proofing_card"
+    case additionalDetailsCard = "additional_details_card"
     case unknown
 
     init(from decoder: any Decoder) throws {
@@ -42,6 +32,7 @@ enum DetailsTemplateProperties: Decodable {
     case titleLocationCard(TitleLocationTemplateProperties)
     case countdownTimerCard(CountDownTimerTemplateProperties)
     case socialProofingCard(SocialProofingTemplateProperties)
+    case additionalDetailsCard(AdditionalDetailsTemplateProperties)
     case unknown
 
     var templateType: DetailsTemplateType {
@@ -54,6 +45,8 @@ enum DetailsTemplateProperties: Decodable {
                 return .countdownTimerCard
             case .socialProofingCard:
                 return .socialProofingCard
+            case .additionalDetailsCard:
+                return .additionalDetailsCard
             case .unknown:
                 return .unknown
         }
@@ -84,6 +77,9 @@ enum DetailsTemplateProperties: Decodable {
             case .socialProofingCard:
                 let templateProps = try objContainer.decode(SocialProofingTemplateProperties.self)
                 self = .socialProofingCard(templateProps)
+            case .additionalDetailsCard:
+                let templateProps = try objContainer.decode(AdditionalDetailsTemplateProperties.self)
+                self = .additionalDetailsCard(templateProps)
             case .unknown:
                 self = .unknown
         }
@@ -126,4 +122,13 @@ struct CountDownTimerTemplateProperties: Decodable {
 struct SocialProofingTemplateProperties: Decodable {
     let description: String?
     let assets: [GenericAsset]?
+}
+
+struct AdditionalDetailsTemplateProperties: Decodable {
+    let details: [AdditionalInfoItem]?
+}
+
+struct AdditionalInfoItem: Decodable {
+    let header: String?
+    let body: String?
 }

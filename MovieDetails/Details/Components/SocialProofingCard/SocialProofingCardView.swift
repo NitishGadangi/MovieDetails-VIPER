@@ -63,7 +63,7 @@ private extension SocialProofingCardView {
         descriptionLabel.snp.makeConstraints { make in
             make.top.equalTo(stackedImageView.snp.bottom).offset(8)
             make.leading.trailing.equalToSuperview().inset(16)
-            make.bottom.equalToSuperview()
+            make.bottom.equalToSuperview().inset(15)
         }
     }
 
@@ -92,6 +92,6 @@ private extension SocialProofingCardView {
 
 extension SocialProofingCardView {
     struct SizeConstants {
-        static var height: CGFloat { 32 + 8 + 20 }
+        static var height: CGFloat { 32 + 8 + 20 + 15 }
     }
 }

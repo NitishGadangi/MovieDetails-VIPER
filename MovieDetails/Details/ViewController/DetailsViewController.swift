@@ -22,6 +22,7 @@ final class DetailsViewController: UIViewController, DetailsViewControllerProtoc
         layout.scrollDirection = .vertical
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.isPagingEnabled = false
+        view.register(AdditionalDetailsCardCell.self)
         view.register(SocialProofingCell.self)
         view.register(CountDownTimerCell.self)
         view.register(TimeLocationCell.self)
@@ -187,12 +188,16 @@ extension DetailsViewController: UICollectionViewDelegate, UICollectionViewDataS
                 let cell: SocialProofingCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
                 cell.wrappedView.config(viewModel: viewModel)
                 return cell
+            case let viewModel as AdditionalDetailsCardViewModel:
+                let cell: AdditionalDetailsCardCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
+                cell.wrappedView.config(viewModel: viewModel)
+                return cell
             default:
                 let cell: EmptyCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
                 return cell
         }
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return presenter.sizeForItemAt(index: indexPath.section)
     }

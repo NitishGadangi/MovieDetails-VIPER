@@ -15,7 +15,7 @@ final class TextIndicatorPageControl: UIView, ReusableView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        view.isPagingEnabled = true
+        view.isPagingEnabled = false
         view.register(TextIndicatorItemCell.self)
         view.showsHorizontalScrollIndicator = false
         view.showsVerticalScrollIndicator = false
@@ -84,7 +84,6 @@ private extension TextIndicatorPageControl {
         }
 
         borderLine.snp.makeConstraints { make in
-            make.top.equalTo(collectionView.snp.bottom)
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(1)
             make.bottom.equalToSuperview()
@@ -92,6 +91,8 @@ private extension TextIndicatorPageControl {
     }
 
     func setupListeners() {
+        collectionView.contentInset.left = 16
+        collectionView.contentInset.right = 16
         collectionView.delegate = self
         collectionView.dataSource = self
     }
@@ -120,7 +121,7 @@ extension TextIndicatorPageControl: UICollectionViewDelegate, UICollectionViewDa
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 70, height: 48)
+        return CGSize(width: 90, height: 48)
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

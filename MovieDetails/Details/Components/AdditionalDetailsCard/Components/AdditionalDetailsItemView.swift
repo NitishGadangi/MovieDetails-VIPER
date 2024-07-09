@@ -49,7 +49,8 @@ private extension AdditionalDetailsItemView {
     func setupConstraints() {
         label.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(CommonInsets.leftPadding)
-            make.top.bottom.equalToSuperview().inset(12)
+            make.top.equalToSuperview().inset(12)
+            make.bottom.lessThanOrEqualToSuperview()
         }
     }
 }

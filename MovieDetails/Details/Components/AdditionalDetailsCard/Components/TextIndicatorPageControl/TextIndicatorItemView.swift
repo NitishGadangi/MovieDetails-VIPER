@@ -18,6 +18,7 @@ final class TextIndicatorItemView: UIView, ReusableView {
         view.numberOfLines = 1
         view.font = CommonFonts.sfMedium14
         view.textColor = CommonColors.flatGrey
+        view.textAlignment = .center
         return view
     }()
 
@@ -71,6 +72,7 @@ private extension TextIndicatorItemView {
         indicator.snp.makeConstraints { make in
             make.height.equalTo(2)
             make.leading.trailing.equalToSuperview()
+            make.bottom.equalToSuperview()
         }
     }
 }

@@ -61,18 +61,18 @@ private extension DetailsPresenter {
 extension DetailsPresenter {
     func numberOfTemplateItems() -> Int {
         let model = interactor.getDataModel()
-        return model?.overview?.count ?? 0
+        return model?.items?.count ?? 0
     }
 
     func templateTypeForItemAt(index: Int) -> DetailsTemplateType {
         let model = interactor.getDataModel()
-        let templateModel = model?.overview?[safe: index]
+        let templateModel = model?.items?[safe: index]
         return templateModel?.templateType ?? .unknown
     }
 
     func modelForItemAt(index: Int) -> (any ViewModellable)? {
         let model = interactor.getDataModel()
-        let templateModel = model?.overview?[safe: index]
+        let templateModel = model?.items?[safe: index]
         switch templateModel {
             case .assetCarouselCard(let model):
                 return AssetCarouselCardViewModel(model: model)
@@ -82,6 +82,8 @@ extension DetailsPresenter {
                 return CountDownTimerCardViewModel(model: model)
             case .socialProofingCard(let model):
                 return SocialProofingCardViewModel(model: model)
+            case .additionalDetailsCard(let model):
+                return AdditionalDetailsCardViewModel(model: model.details)
             default:
                 return nil
         }
@@ -100,6 +102,8 @@ extension DetailsPresenter {
                 height = CountDownTimerCardView.SizeConstants.height
             case .socialProofingCard:
                 height = SocialProofingCardView.SizeConstants.height
+            case .additionalDetailsCard:
+                height = 800
             case .unknown:
                 height = 0
         }

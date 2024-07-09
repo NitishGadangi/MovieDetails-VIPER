@@ -22,6 +22,6 @@ final class AdditionalDetailsCardViewModel: ViewModellable {
     }
 
     func bodyAt(index: Int) -> String? {
-        return model?[safe: index]?.header
+        return model?[safe: index]?.body
     }
 }
