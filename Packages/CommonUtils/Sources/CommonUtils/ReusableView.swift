@@ -23,3 +23,7 @@ public extension ReusableView {
 public protocol ReusableCollectionViewChild: ReusableView {
     var respectiveCell: UICollectionViewCell? {get set}
 }
+
+public protocol Reusable: AnyObject {
+    static var reuseIdentifier: String { get }
+}

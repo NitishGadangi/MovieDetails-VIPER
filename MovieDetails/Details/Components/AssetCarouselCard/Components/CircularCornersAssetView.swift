@@ -1,5 +1,5 @@
 //
-//  CircularImageView.swift
+//  CircularCornersAssetView.swift
 //  MovieDetails
 //
 //  Created by Nitish Gadangi on 09/07/24.
@@ -10,7 +10,9 @@ import UIKit
 import CommonUtils
 import SnapKit
 
-final class CircularImageView: UIView {
+typealias CircularCornersAssetCell = AnyCollectionViewCell<CircularCornersAssetView>
+
+final class CircularCornersAssetView: UIView, ReusableView {
     private let imageView: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleAspectFill
@@ -30,9 +32,7 @@ final class CircularImageView: UIView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        imageView.layer.cornerRadius = bounds.width/2
-        imageView.layer.borderColor = CommonColors.pureWhite.cgColor
-        imageView.layer.borderWidth = 1
+        imageView.layer.cornerRadius = 10
     }
 
     func config(imgUrl: String?) {
@@ -40,7 +40,7 @@ final class CircularImageView: UIView {
     }
 }
 
-private extension CircularImageView {
+private extension CircularCornersAssetView {
     func setupUI() {
         addSubViews()
         setupConstraints()
@@ -54,7 +54,17 @@ private extension CircularImageView {
         imageView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
             make.top.bottom.equalToSuperview()
-            make.width.height.equalTo(32)
+            make.width.equalTo(SizeConstants.imageWidth)
+            make.height.equalTo(SizeConstants.imageHeight)
         }
+    }
+}
+
+extension CircularCornersAssetView {
+    struct SizeConstants {
+        static var screenWidth: CGFloat { UIScreen.main.bounds.width }
+        static var imageAspectRatio: CGFloat { 1.33 }
+        static var imageWidth: CGFloat { screenWidth - 16 - 31 } // left & right padding
+        static var imageHeight: CGFloat { imageWidth/imageAspectRatio }
     }
 }
