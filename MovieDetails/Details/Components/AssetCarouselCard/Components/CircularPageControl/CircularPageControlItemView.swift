@@ -33,6 +33,11 @@ final class CircularPageControlItemView: UIView {
         super.init(coder: coder)
         setupUI()
     }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        dotView.layer.cornerRadius = 3
+    }
 }
 
 private extension CircularPageControlItemView {
@@ -48,7 +53,6 @@ private extension CircularPageControlItemView {
     func setupConstraints() {
         dotView.snp.makeConstraints { make in
             make.height.width.equalTo(6)
-            make.leading.trailing.top.bottom.equalToSuperview()
         }
     }
 }

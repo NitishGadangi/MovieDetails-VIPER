@@ -13,7 +13,7 @@ final class CircularPageControl: UIView {
     private let stackView: UIStackView = {
         let view = UIStackView()
         view.axis = .horizontal
-        view.spacing = 8
+        view.spacing = 10
         return view
     }()
 
@@ -68,6 +68,7 @@ private extension CircularPageControl {
             stackView.addArrangedSubview(pageControlItem)
             pageControlItem.isSelected = selectedPill == idx
         }
+        layoutIfNeeded()
     }
 
     func updateSelectedPill(_ index: Int) {
@@ -77,5 +78,6 @@ private extension CircularPageControl {
             else { continue }
             pageControlItem.isSelected = index == idx
         }
+        layoutIfNeeded()
     }
 }

@@ -60,6 +60,7 @@ private extension SectionHeaderView {
             make.top.equalTo(label.snp.bottom).offset(SizeConstants.labelTopBottom)
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(1)
+            make.bottom.equalToSuperview()
         }
     }
 }

@@ -23,6 +23,8 @@ let package = Package(
         .target(
             name: "CommonUtils",
             dependencies: [
+                "SnapKit",
+                "Kingfisher",
                 .product(name: "RxCocoa", package: "RxSwift"),
             ]
         ),

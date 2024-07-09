@@ -55,7 +55,6 @@ private extension AssetCarouselCardView {
 
         pageControl.snp.makeConstraints { make in
             make.top.equalTo(collectionView.snp.bottom).offset(12)
-            make.leading.trailing.bottom.equalToSuperview()
             make.centerX.equalToSuperview()
         }
     }
