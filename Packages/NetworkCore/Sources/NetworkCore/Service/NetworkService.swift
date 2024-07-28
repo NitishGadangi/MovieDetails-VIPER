@@ -17,9 +17,9 @@ class NetworkService<EndPoint: EndPointType>: NetworkServiceble {
             let request = try self.buildRequest(from: route)
             logger.log(request: request)
             task = session.dataTask(with: request, completionHandler: { data, response, error in
-              completion(data, response, error)
+                completion(data, response, error)
             })
-        }catch {
+        } catch {
             completion(nil, nil, error)
         }
         self.task?.resume()
@@ -37,7 +37,7 @@ class NetworkService<EndPoint: EndPointType>: NetworkServiceble {
             case .request:
                 request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
-            // insert other cases here
+                // insert other cases here
         }
         return request
     }

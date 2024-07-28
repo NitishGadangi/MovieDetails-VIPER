@@ -23,6 +23,10 @@ extension MoviesAPI: EndPointType {
         "/details"
     }
 
+    var mockResponseFileName: String {
+        "movie_detail_response"
+    }
+
     var httpMethod: NetworkCore.HTTPMethod {
         .get
     }
