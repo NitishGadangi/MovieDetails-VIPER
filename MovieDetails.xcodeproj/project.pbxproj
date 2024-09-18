@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E00E1342C558DAA00030379 /* PlaygroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E00E1332C558DAA00030379 /* PlaygroundVC.swift */; };
+		5E00E1372C566FBF00030379 /* TransitionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E00E1362C566FBF00030379 /* TransitionsVC.swift */; };
+		5E00E1392C56732800030379 /* AnimationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E00E1382C56732800030379 /* AnimationsVC.swift */; };
+		5E00E13B2C56865C00030379 /* VCTransitionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E00E13A2C56865C00030379 /* VCTransitionsVC.swift */; };
+		5E00E13E2C5698B600030379 /* CustomPresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E00E13D2C5698B600030379 /* CustomPresentAnimator.swift */; };
+		5E00E1402C56B37E00030379 /* CustomDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E00E13F2C56B37E00030379 /* CustomDismissAnimator.swift */; };
+		5E78BEF12C577974000B4863 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78BEF02C577974000B4863 /* TabBarVC.swift */; };
+		5E78BEF32C577A37000B4863 /* TabBarItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78BEF22C577A37000B4863 /* TabBarItemVC.swift */; };
+		5E78BEF52C5780C8000B4863 /* CustomFadeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78BEF42C5780C8000B4863 /* CustomFadeAnimator.swift */; };
+		5E78BEF72C578216000B4863 /* CustomSlideAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78BEF62C578216000B4863 /* CustomSlideAnimator.swift */; };
 		5EAD998A2C3D0CBC00BF23B7 /* CommonInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD99892C3D0CBC00BF23B7 /* CommonInsets.swift */; };
 		5EAD998C2C3D15E800BF23B7 /* BasicErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD998B2C3D15E800BF23B7 /* BasicErrorView.swift */; };
 		5EAD998E2C3D15F900BF23B7 /* BasicLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD998D2C3D15F900BF23B7 /* BasicLoaderView.swift */; };
@@ -62,6 +72,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E00E1332C558DAA00030379 /* PlaygroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundVC.swift; sourceTree = "<group>"; };
+		5E00E1362C566FBF00030379 /* TransitionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionsVC.swift; sourceTree = "<group>"; };
+		5E00E1382C56732800030379 /* AnimationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsVC.swift; sourceTree = "<group>"; };
+		5E00E13A2C56865C00030379 /* VCTransitionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCTransitionsVC.swift; sourceTree = "<group>"; };
+		5E00E13D2C5698B600030379 /* CustomPresentAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPresentAnimator.swift; sourceTree = "<group>"; };
+		5E00E13F2C56B37E00030379 /* CustomDismissAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDismissAnimator.swift; sourceTree = "<group>"; };
+		5E78BEF02C577974000B4863 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		5E78BEF22C577A37000B4863 /* TabBarItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemVC.swift; sourceTree = "<group>"; };
+		5E78BEF42C5780C8000B4863 /* CustomFadeAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFadeAnimator.swift; sourceTree = "<group>"; };
+		5E78BEF62C578216000B4863 /* CustomSlideAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlideAnimator.swift; sourceTree = "<group>"; };
 		5EAD99892C3D0CBC00BF23B7 /* CommonInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonInsets.swift; sourceTree = "<group>"; };
 		5EAD998B2C3D15E800BF23B7 /* BasicErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicErrorView.swift; sourceTree = "<group>"; };
 		5EAD998D2C3D15F900BF23B7 /* BasicLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLoaderView.swift; sourceTree = "<group>"; };
@@ -131,6 +151,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E00E1352C566F8F00030379 /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+				5E78BEEF2C57795F000B4863 /* TabBar */,
+				5E00E13C2C56989400030379 /* CustomAnimators */,
+				5E00E1332C558DAA00030379 /* PlaygroundVC.swift */,
+				5E00E1362C566FBF00030379 /* TransitionsVC.swift */,
+				5E00E1382C56732800030379 /* AnimationsVC.swift */,
+				5E00E13A2C56865C00030379 /* VCTransitionsVC.swift */,
+			);
+			path = Practice;
+			sourceTree = "<group>";
+		};
+		5E00E13C2C56989400030379 /* CustomAnimators */ = {
+			isa = PBXGroup;
+			children = (
+				5E00E13D2C5698B600030379 /* CustomPresentAnimator.swift */,
+				5E00E13F2C56B37E00030379 /* CustomDismissAnimator.swift */,
+				5E78BEF42C5780C8000B4863 /* CustomFadeAnimator.swift */,
+				5E78BEF62C578216000B4863 /* CustomSlideAnimator.swift */,
+			);
+			path = CustomAnimators;
+			sourceTree = "<group>";
+		};
+		5E78BEEF2C57795F000B4863 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				5E78BEF02C577974000B4863 /* TabBarVC.swift */,
+				5E78BEF22C577A37000B4863 /* TabBarItemVC.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		5EAD99932C3D273600BF23B7 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +267,7 @@
 		5EDDEE4C2C3B187900DAE3BB /* MovieDetails */ = {
 			isa = PBXGroup;
 			children = (
+				5E00E1352C566F8F00030379 /* Practice */,
 				5EDDFE972C3D062B000C78BB /* Constants */,
 				5EDDEE662C3BB2AA00DAE3BB /* Details */,
 				5EDDEE4D2C3B187900DAE3BB /* AppDelegate.swift */,
@@ -490,6 +544,7 @@
 				5EDDEE852C3BC72E00DAE3BB /* DetailsRouter.swift in Sources */,
 				5EAD99C42C3DC1A900BF23B7 /* AssetCarouselCardViewModel.swift in Sources */,
 				5EDDEE892C3BC78A00DAE3BB /* DetailsModels.swift in Sources */,
+				5E00E13B2C56865C00030379 /* VCTransitionsVC.swift in Sources */,
 				5EAD99B52C3D82E000BF23B7 /* AdditionalDetailsItemView.swift in Sources */,
 				5EAD99B02C3D757B00BF23B7 /* TextIndicatorItemView.swift in Sources */,
 				5EDDEE4E2C3B187900DAE3BB /* AppDelegate.swift in Sources */,
@@ -503,18 +558,27 @@
 				5EDDEE7F2C3BC6F100DAE3BB /* DetailsRepository.swift in Sources */,
 				5EAD99AA2C3D4E2B00BF23B7 /* CircularPageControlItemView.swift in Sources */,
 				5EDDEE8B2C3BD11E00DAE3BB /* CommonModels.swift in Sources */,
+				5E78BEF12C577974000B4863 /* TabBarVC.swift in Sources */,
 				5EAD999C2C3D35BB00BF23B7 /* SocialProofingCardView.swift in Sources */,
+				5E00E1372C566FBF00030379 /* TransitionsVC.swift in Sources */,
 				5EAD99922C3D272600BF23B7 /* TimeLocationCardView.swift in Sources */,
 				5EDDFE992C3D06C4000C78BB /* CommonFonts.swift in Sources */,
+				5E78BEF72C578216000B4863 /* CustomSlideAnimator.swift in Sources */,
 				5EDDEE502C3B187900DAE3BB /* SceneDelegate.swift in Sources */,
 				5EDDFE962C3D0092000C78BB /* SectionHeaderView.swift in Sources */,
 				5EAD99A12C3D36DC00BF23B7 /* CircularImageView.swift in Sources */,
+				5E00E1402C56B37E00030379 /* CustomDismissAnimator.swift in Sources */,
 				5EDDEE732C3BC69400DAE3BB /* DetailsViewController.swift in Sources */,
+				5E00E1392C56732800030379 /* AnimationsVC.swift in Sources */,
 				5EDDEE872C3BC74000DAE3BB /* DetailsRouterProtocol.swift in Sources */,
 				5EDDEE822C3BC71300DAE3BB /* DetailsRepositoryProtocol.swift in Sources */,
 				5EDDEE752C3BC69F00DAE3BB /* DetailsViewControllerProtocol.swift in Sources */,
+				5E78BEF32C577A37000B4863 /* TabBarItemVC.swift in Sources */,
+				5E00E1342C558DAA00030379 /* PlaygroundVC.swift in Sources */,
 				5EAD99A82C3D4DCA00BF23B7 /* CircularPageControl.swift in Sources */,
 				5EAD99BE2C3DBE0800BF23B7 /* SocialProofingCardViewModel.swift in Sources */,
+				5E00E13E2C5698B600030379 /* CustomPresentAnimator.swift in Sources */,
+				5E78BEF52C5780C8000B4863 /* CustomFadeAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
