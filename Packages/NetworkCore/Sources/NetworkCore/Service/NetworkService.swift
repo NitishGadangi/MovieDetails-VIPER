@@ -16,9 +16,7 @@ class NetworkService<EndPoint: EndPointType>: NetworkServiceble {
         do {
             let request = try self.buildRequest(from: route)
             logger.log(request: request)
-            task = session.dataTask(with: request, completionHandler: { data, response, error in
-                completion(data, response, error)
-            })
+            task = session.dataTask(with: request, completionHandler: completion)
         } catch {
             completion(nil, nil, error)
         }
